@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //create app object
+        const moviePicker = {};
+
+        //save API information
+        moviePicker.apiUrl = "https://api.themoviedb.org/3/";
+        moviePicker.apiGenrelUrl = "https://api.themoviedb.org/3/genre/movie/list";
+        moviePicker.apiMovieByGenreUrl = "https://api.themoviedb.org/3/discover/movie";
+        moviePicker.apiActorUrl = "https://api.themoviedb.org/3/search/person";
+        moviePicker.apiKey = "7b4ee228270013c7be42d484778165ef";
+
+        //get list of genres from api
+        moviePicker.getGenre = () => {
+            //url constructor to add api key
+            const url = new URL(moviePicker.apiGenrelUrl);
+            url.search = new URLSearchParams({
+                api_key: moviePicker.apiKey
+            })
+
+            //request to API genre endpoint
+            fetch(url)
+            //parse response into JSON and return response so it can be used
+            .then((response) => {
+                return response.json();
+            })
+            //parse JSON promise response
+            .then((jsonResponse) => {
+                // console.log(jsonResponse);
+                //todo
+            })
+        };
+
+        //get list of movies by genre from api
+        moviePicker.getMovieByGenre = (genre) => {
+            //url constructor to add api key and genre id
+            const url = new URL(moviePicker.apiMovieByGenreUrl);
+            url.search = new URLSearchParams({
+                api_key: moviePicker.apiKey,
+                with_genres: genre,
+            })
+
+            //request to API genre endpoint
+            fetch(url)
+            //parse response into JSON and return response so it can be used
+            .then((response) => {
+                return response.json();
+            })
+            //parse JSON promise response
+            .then((jsonResponse) => {
+                console.log(jsonResponse);
+                //todo
+
+                //can get title, poster, genres, description, vote average, release data, popularity, movie id
+            })
+        }
+
+        moviePicker.getActor = (name) => { 
+            //url constructor to add api key and search by name
+            const url = new URL(moviePicker.apiActorUrl);
+            url.search = new URLSearchParams({
+                api_key: moviePicker.apiKey,
+                query: name
+            })
+
+            //request to API genre endpoint
+            fetch(url)
+            //parse response into JSON and return response so it can be used
+            .then((response) => {
+                return response.json();
+            })
+            //parse JSON promise response
+            .then((jsonResponse) => {
+                console.log(jsonResponse);
+                //todo
+            })
+
+        }
+ 
+        //create an initialization method
+        moviePicker.init = () => {
+
+            //calling the method which makes the request to the API
+            moviePicker.getGenre();
+            moviePicker.getMovieByGenre(28);
+            moviePicker.getActor("brad pitt");
+        }
+
+        //call the init method to kickstart our app
+        moviePicker.init();
+
+        //landing page for user
+        //user will click start button
+            //event listener on button to listen for click
+        //main page for user
+        //user chooses genre from drop down and searches for movie with actor
+            //event listener on button to listen for submit
+        //initialize method
+            //calls method to request api
+        //results page for user
+        
+
+
+
+    </script>
+</body>
+
+</html>
