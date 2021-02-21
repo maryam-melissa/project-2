@@ -4,9 +4,12 @@ moviePicker.apiKey = `7b4ee228270013c7be42d484778165ef`;
 
 //Get Genre List form API call
 moviePicker.apiGenrelUrl = "https://api.themoviedb.org/3/genre/movie/list";
+
+//method to call genre api and fetch data
 moviePicker.getGenre = () => {
   //URL constructor to add api key
   const url = new URL(moviePicker.apiGenrelUrl);
+  //add api key to url
   url.search = new URLSearchParams({
     api_key: moviePicker.apiKey,
   })
@@ -18,34 +21,34 @@ moviePicker.getGenre = () => {
     })
     //parse JSON promise response
     .then((jsonResponse) => {
-      console.log(jsonResponse);
-      //todo
       //use the data to load into genre dropdown
-      moviePicker.loadGenreData(jsonResponse);
-
+      moviePicker.loadGenreData(jsonResponse.genres);
     })
 };
 
-//method to add genre data to html
-moviePicker.loadGenreData = (genre) => {
+//method to add genre data to select in html
+moviePicker.loadGenreData = (genres) => {
   //find the dropdown selector
   const selectForm = document.querySelector('select');
 
-  //for each item in dropdown
-  genre.forEach(genreElement => {
-    //todo
+  //for each genre in genres array
+  genres.forEach(genre => {
+    //creation option element
+    const option = document.createElement('option');
+    //set value of option to genre id
+    option.value = genre.id;
+    //set inner html to genre name
+    option.innerHTML = genre.name;
+    //append option to select element
+    selectForm.appendChild(option);
   });
-
-  for () {
-    //add a new option with genre id and genre name
-    option.innerHTML = '<option value=""></option> ';
-  }
-  
-  
 }
 
+//app initialize method
 moviePicker.init = () => {
+  //genre api call to load genre data to form
   moviePicker.getGenre();
 }
 
+//method call to start app
 moviePicker.init();
