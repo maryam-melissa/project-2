@@ -20,8 +20,29 @@ moviePicker.getGenre = () => {
     .then((jsonResponse) => {
       console.log(jsonResponse);
       //todo
+      //use the data to load into genre dropdown
+      moviePicker.loadGenreData(jsonResponse);
+
     })
 };
+
+//method to add genre data to html
+moviePicker.loadGenreData = (genre) => {
+  //find the dropdown selector
+  const selectForm = document.querySelector('select');
+
+  //for each item in dropdown
+  genre.forEach(genreElement => {
+    //todo
+  });
+
+  for () {
+    //add a new option with genre id and genre name
+    option.innerHTML = '<option value=""></option> ';
+  }
+  
+  
+}
 
 moviePicker.init = () => {
   moviePicker.getGenre();
