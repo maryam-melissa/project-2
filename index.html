@@ -9,18 +9,27 @@
 </head>
 
 <body>
-    <form action="">
-        <h3>Choose Your Preferences</h3>
+    <header>
+        <form action="">
+            <h3>Choose Your Preferences</h3>
+    
+            <label for="actorName">Actor</label>
+            <input type="text" id="actorName">
+    
+            <select name="genre" id="genre">
+                <option value="0">Select genre..</option>
+                <!--Dynamically add genres-->
+            </select>
+            <button type="submit">Submit</button>
+        </form>
 
-        <label for="actorName">Actor</label>
-        <input type="text" id="actorName">
+    </header>
 
-        <select name="genre" id="genre">
-            <option value="0">Select genre..</option>
-            <!--Dynamically add genres-->
-        </select>
-        <button type="submit">Submit</button>
-    </form>
+    <main>
+        <div class="results">
+            <!--Add results dynamically-->
+        </div>
+    </main>  
     <script src="./index.js"></script>
 </body>
 
