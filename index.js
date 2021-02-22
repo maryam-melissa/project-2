@@ -24,7 +24,7 @@ form.addEventListener('submit', function (event) {
   // console.log(genreInput.selectedOptions[0].value);
 
   //api call
-moviePicker.getActorId(actorInput.value, genreInput.selectedOptions[0].value);
+  moviePicker.getActorId(actorInput.value, genreInput.selectedOptions[0].value);
 
 });
 
@@ -35,22 +35,35 @@ moviePicker.getActorId = (name, genre) => {
     query: name
   })
   fetch(url)
-  //parse response into JSON and return response so it can be used
-  .then((response) => {
-    return response.json();
-  })
-  //parse JSON promise response
-  .then((jsonResponse) => {
-    console.log(jsonResponse.results[0].id);
-    //figure out how to return result
-    moviePicker.getFilteredMovies(jsonResponse.results[0].id, genre);
-  })
+    //parse response into JSON and return response so it can be used
+    .then((response) => {
+      return response.json();
+    })
+    //parse JSON promise response
+    .then((jsonResponse) => {
+      console.log(jsonResponse.results[0].id);
+      moviePicker.getFilteredMovies(jsonResponse.results[0].id, genre);
+    })
 }
 
 //method to call api filtered with user input
 moviePicker.getFilteredMovies = (actorId, genre) => {
   console.log(actorId, genre);
-  
+  const url = new URL(moviePicker.apiFilteredMovies);
+  url.search = new URLSearchParams({
+    api_key: moviePicker.apiKey,
+    with_cast: actorId,
+    with_genre: genre,
+  })
+  fetch(url)
+    //parse response into JSON and return response so it can be used
+    .then((response) => {
+      return response.json();
+    })
+    //parse JSON promise response
+    .then((jsonResponse) => {
+      console.log(jsonResponse)
+    })
 }
 
 //method to call genre api and fetch data
