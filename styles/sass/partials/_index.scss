@@ -1,3 +1,33 @@
+.moviePrefrences {
+    height:80vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+    }
+    fieldset {
+        width:400px;
+    }
+
+    input[type=text], select {
+        width: 80%;
+        padding: 15px 20px;
+        margin: 15px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .moviePickerBtn{
+    padding:1rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    margin-top: 1rem;
+    }
+}
+
 .index {
     background-color: rgb(245, 211, 211);
 
