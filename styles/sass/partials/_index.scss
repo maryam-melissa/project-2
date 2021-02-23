@@ -1,6 +1,21 @@
 .index {
     background-color: rgb(245, 211, 211);
 
+    header {
+        text-align: center;
+        padding-top: 10%;
+    }
+
+    .preferences {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .genre {
+            width: 250px;
+        }
+    }
+
     .results {
         padding: 50px;
         display: flex;

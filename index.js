@@ -1,20 +1,14 @@
-//Create an Movie app
+//Create movie app
 const moviePicker = {};
 moviePicker.apiKey = `7b4ee228270013c7be42d484778165ef`;
 
 //Base url for api endpoint
 moviePicker.baseURL = "https://api.themoviedb.org/3/"
 
-//Get Genre List form API call
-moviePicker.apiGenrelUrl = "https://api.themoviedb.org/3/genre/movie/list";
-//Get Movies with Actor from API call
-moviePicker.apiActorUrl = "https://api.themoviedb.org/3/search/person";
-//Get Movies Filtered with Actor ID and Genre
-moviePicker.apiFilteredMovies = "https://api.themoviedb.org/3/discover/movie";
-
 //Select form element for method use
 const form = document.querySelector('form');
 
+/***Event Listeners****/
 //Event Listener to listen for submit button to be clicked by user.
 //*******Need to add error message in case user does not submit correct input*********
 form.addEventListener('submit', function (event) {
@@ -31,11 +25,13 @@ form.addEventListener('submit', function (event) {
   moviePicker.getActorId(actorInput.value, genreInput.selectedOptions[0].value);
 });
 
-
+/****API Method Calls****/
 //Method to retrieve actor id from api 
 moviePicker.getActorId = (name, genre) => {
+  //Api Endpoint to append to base url
+  const endpoint = "search/person";
   //Url Constructor
-  const url = new URL(moviePicker.apiActorUrl);
+  const url = new URL(moviePicker.baseURL + endpoint);
   //Url Parameters
   url.search = new URLSearchParams({
     api_key: moviePicker.apiKey,
@@ -54,17 +50,19 @@ moviePicker.getActorId = (name, genre) => {
       //Pass actor id found from api call and genre passed to method to search for movies with both preferences
       moviePicker.getFilteredMovies(jsonResponse.results[0].id, genre);
     })
-}
+};
 
 //Method to call api with user input preferences
 moviePicker.getFilteredMovies = (actorId, genre) => {
+  //Api endpoint to append to base url
+  const endpoint = "discover/movie";
   //Url Constructor
-  const url = new URL(moviePicker.apiFilteredMovies);
+  const url = new URL(moviePicker.baseURL + endpoint);
   //Url Parameters
   url.search = new URLSearchParams({
     api_key: moviePicker.apiKey,
     with_cast: actorId,
-    with_genre: genre,
+    with_genres: genre,
   })
 
   //Fetch data from api endpoint
@@ -77,29 +75,60 @@ moviePicker.getFilteredMovies = (actorId, genre) => {
     .then((jsonResponse) => {
       //Call method to load results to Html page
       console.log(jsonResponse.results);
-      moviePicker.loadMovies(jsonResponse.results);
+      moviePicker.loadMovies(jsonResponse.results, genre);
     })
-}
+};
 
-//Method to load results to Html page
-moviePicker.loadMovies = (movies) => {
+//Method to call genre api and fetch data to put into form select
+moviePicker.getGenre = () => {
+  //Api Endpoint to append to base url
+  const endpoint = "genre/movie/list";
+  //Url constructor to add api key
+  const url = new URL(moviePicker.baseURL + endpoint);
+  //Search Parameters
+  url.search = new URLSearchParams({
+    api_key: moviePicker.apiKey,
+  });
+
+  //Request to API genre endpoint
+  fetch(url)
+    //Parse response into JSON and return response so it can be used
+    .then((response) => {
+      return response.json();
+    })
+    //Parse JSON promise response
+    .then((jsonResponse) => {
+      //Call method to load data into form select
+      moviePicker.loadGenreData(jsonResponse.genres);
+    })
+};
+
+/****Methods to load data to html****/
+
+//Method to load results to Html page and contains an event listener for when an image is clicked
+moviePicker.loadMovies = (movies, genre) => {
   //Select div element that we want to dynamically change
   const results = document.querySelector('.results');
   // Clears the container before appending results to it
   results.innerHTML = '';
   //Loop through each movie item we got from API
   movies.forEach((movie) => {
+    // if (movie.src) {
     // Create a div element to wrap each movie
     const movieDiv = document.createElement('div');
     //Add movie class to div
     movieDiv.classList.add('movie');
 
-    //image path that we recieved from api call
+    //Image path retrieved from api
     const url = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
-    // Create a img element for the art img
+    // Create an img element
     const image = document.createElement('img');
+    //Add image path to image src attribute
     image.src = url;
+    //Add movie title image description to alt attribute
     image.alt = movie.title;
+    image.id = movie.id;
+
 
     //Create an h2 element for the title
     const title = document.createElement('h2');
@@ -115,7 +144,7 @@ moviePicker.loadMovies = (movies) => {
     movieDiv.append(image, title, moviePopularity);
     //Append div to results div
     results.append(movieDiv);
-  })
+  });
 
   //Create an image element
   const img = document.createElement('img');
@@ -125,28 +154,20 @@ moviePicker.loadMovies = (movies) => {
   img.alt = "";
   //Append element to Html
   results.appendChild(img);
-}
 
-//Method to call genre api and fetch data to put into form select
-moviePicker.getGenre = () => {
-  //Url constructor to add api key
-  const url = new URL(moviePicker.apiGenrelUrl);
-  //Search Parameters
-  url.search = new URLSearchParams({
-    api_key: moviePicker.apiKey,
+  //For each image on page, add an event listener for user click
+  document.querySelectorAll('img').forEach(movieImage => {
+    movieImage.addEventListener('click', function (event) {
+      //Prevent page from refreshing
+      event.preventDefault();
+      //Store movie id
+      const movieId = movieImage.id;
+      //Redirect page to movie-info page and pass movie id
+      window.location.href = "./movie-info.html" + '?' + movieId;
+    })
   })
-  //Request to API genre endpoint
-  fetch(url)
-    //Parse response into JSON and return response so it can be used
-    .then((response) => {
-      return response.json();
-    })
-    //Parse JSON promise response
-    .then((jsonResponse) => {
-      //Call method to load data into form select
-      moviePicker.loadGenreData(jsonResponse.genres);
-    })
 };
+
 
 //Method to add genre data to select in Html
 moviePicker.loadGenreData = (genres) => {
@@ -164,13 +185,13 @@ moviePicker.loadGenreData = (genres) => {
     //Append option to select element
     selectForm.appendChild(option);
   });
-}
+};
 
-//Method to initialize app
+/****Initialize Method****/
 moviePicker.init = () => {
   //Genre api call to load genre data to form
   moviePicker.getGenre();
-}
+};
 
 //Method to start app
 moviePicker.init();
