@@ -1,0 +1,40 @@
+.index {
+    background-color: rgb(245, 211, 211);
+
+    .results {
+        padding: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        
+    
+        .movie {
+            width: calc(33% - 5%); 
+            margin: 2%;
+            position: relative;
+
+            img {
+                width: 100%;
+                border-radius: 5px;
+            }
+
+            h2 {
+                font-family: $movie-title;
+                font-size: 2rem;
+                text-align: center;
+                margin: 1rem;
+            }
+
+            p {
+                position: absolute;
+                bottom: 5%;
+                right: -2%;
+                background-color: red;
+                border-radius: 50%;
+                padding: 2rem;
+                color: white;
+
+            }
+        }
+
+    }
+}

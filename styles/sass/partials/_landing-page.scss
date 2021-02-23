@@ -1,22 +1,21 @@
 .landing-page {
-  background-color:rgb(245, 211, 211) ;
+  background-color:rgb(245, 211, 211);
+  h1{
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  header {
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   
-}
-h1{
-  font-size: 8rem;
-}
-h2 {
-  font-size: 3rem;
-}
-header {
-  height:100vh;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .start-btn {
-    padding:1rem 2rem;
-    font-size: 1.6rem;
+    .start-btn {
+      padding:1rem 2rem;
+      font-size: 1.6rem;
+    }
   }
 }
