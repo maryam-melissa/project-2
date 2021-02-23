@@ -8,36 +8,36 @@
     <!-- Stylesheet Link -->
     <link rel="stylesheet" href="./styles/styles.css">
     <!--Import Playfair Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body class="index">
     <header>
         <form action="">
-            <h3>Choose Your Preferences</h3>
-            <div class="preferences">
-                <div class="label">
-                    <label for="actorName">Actor</label>
+            <div class="moviePrefrences">
+                <h3>Choose Your Preferences</h3>
+                <fieldset>
+                    <label for="actorName">Actor: </label>
                     <input type="text" id="actorName">
-                </div>
-        
-                <select name="genre" id="genre" class="genre">
-                    <option value="0">Select genre..</option>
-                    <!--Dynamically add genres-->
-                </select>
-
-                <button type="submit">Submit</button>
+                </fieldset>
+                <fieldset class="custom-select">
+                    <label for="genre">Genre: </label>
+                    <select name="genre" id="genre" class="genre">
+                        <option value="0">Select genre..</option>
+                        <!--Dynamically add genres-->
+                    </select>
+                </fieldset>
+                <button type="submit" class="moviePickerBtn">Pick a Movie</button>
             </div>
         </form>
-
     </header>
 
     <main>
         <div class="results wrapper">
             <!--Add results dynamically-->
         </div>
-    </main>  
+    </main>
     <script src="./index.js"></script>
 </body>
 

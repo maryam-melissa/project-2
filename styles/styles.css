@@ -235,6 +235,47 @@ body {
   margin: 0 auto;
 }
 
+.moviePrefrences {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.moviePrefrences h3 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.moviePrefrences fieldset {
+  width: 400px;
+}
+
+.moviePrefrences input[type=text], .moviePrefrences select {
+  width: 80%;
+  padding: 15px 20px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.moviePrefrences .moviePickerBtn {
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  margin-top: 1rem;
+}
+
 .index {
   background-color: #f5d3d3;
 }
