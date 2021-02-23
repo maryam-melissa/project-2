@@ -85,6 +85,36 @@ moviePicker.getFilteredMovies = (actorId, genre) => {
 moviePicker.loadMovies = (movies) => {
   //Select div element that we want to dynamically change
   const results = document.querySelector('.results');
+  // Clears the container before appending results to it
+  results.innerHTML = '';
+  //Loop through each movie item we got from API
+  movies.forEach((movie) => {
+    // console.log(movie)
+    // Create a div element to wrap all the information in
+
+    // const movieDiv = document.createElement('div');
+    // movieDiv.classList.add('movie');
+
+    //image path that we recieved from api call
+    const url = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
+    // Create a img element for the art img
+    const image = document.createElement('img');
+    image.src = url;
+    image.alt = movie.title;
+
+    //Create an h2 element for the title
+    const title = document.createElement('h2');
+
+    //Update the text of h2 with the movie.title
+    title.textContent = movie.title;
+    console.log(title)
+
+    //Get data for movie popularity
+    const moviePopularity = document.createElement('p');
+    // moviePopularity.
+
+  })
+
   //Create an image element
   const img = document.createElement('img');
   //Add image path to the img created
