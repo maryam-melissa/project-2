@@ -372,3 +372,76 @@ body {
   padding: 1rem 2rem;
   font-size: 1.6rem;
 }
+
+.wrapper {
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.movie-info {
+  background-color: #F1C93A;
+  line-height: 1.4;
+}
+
+.movie-info .movieInfoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5rem;
+}
+
+.movie-info .imgContainer {
+  margin-right: 4rem;
+}
+
+.movie-info .imgContainer img {
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.movie-info .textContainer {
+  padding-top: 5rem;
+  max-width: 55%;
+  width: 100%;
+}
+
+.movie-info .textContainer button {
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+}
+
+.movie-info .textContainer .productions_companies .productionCompanyEl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.movie-info .textContainer .productions_companies img {
+  width: 50px;
+}
+
+.movie-info h2 {
+  font-size: 5rem;
+}
+
+.movie-info h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
