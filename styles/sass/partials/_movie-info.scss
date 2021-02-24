@@ -1,0 +1,64 @@
+.wrapper {
+  max-width: 1200px;
+  width:85%;
+  margin: 0 auto;
+  }
+
+  .movie-info {
+  background-color: #F1C93A;
+  line-height: 1.4;
+
+    .movieInfoContainer {
+      display:flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      margin-top:5rem ;
+    }
+
+    .imgContainer {
+      margin-right: 4rem;
+    
+      img {
+        border-radius: 5px;
+        object-fit: cover;
+      }
+    }
+
+    .textContainer {
+      padding-top: 5rem;
+      max-width: 55%;
+      width:100%;
+    
+      button {
+        background-color: transparent;
+        border:none;
+        font-size: 3rem;
+      }
+
+      .productions_companies {
+        .productionCompanyEl {
+          display:flex;
+          flex-direction: row;
+        }
+        img {
+          width:50px;
+        }
+      }
+
+
+
+
+
+
+    }
+
+    h2 {
+      font-size: 5rem;
+    }
+    h3 {
+      font-size:2rem;
+      font-weight: 600;
+    }
+
+}

@@ -129,7 +129,6 @@ moviePicker.loadMovies = (movies, genre) => {
     image.alt = movie.title;
     image.id = movie.id;
 
-
     //Create an h2 element for the title
     const title = document.createElement('h2');
     //Update the text of h2 with the movie.title
