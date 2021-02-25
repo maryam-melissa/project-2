@@ -6,10 +6,14 @@
     justify-content: flex-start;
     margin-top: 5rem;
     align-items: center;
+    font-family: $font-family;
+    letter-spacing: 3px;
+    
 
     h2 {
         font-size: 5rem;
         margin-bottom: 3rem;
+        font-family:$font-family;
     }
     fieldset {
         width:400px;
@@ -30,14 +34,15 @@
     border: none;
     font-size:2.5rem;
     margin-top: 1.5rem;
-    background-color: #F64C72;
+    background-color: $secondary-color;
     color:white;
+    font-family: $font-family;
     }
 }
 
 .index {
-    background-color: #242582;
-    color:#FFFFFF;
+    background-color:$primary-color;
+    color:$accent-color;
 
     header {
         text-align: center;
