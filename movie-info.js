@@ -1,21 +1,5 @@
 //Create app object
 const movieInfo = {};
-<<<<<<< HEAD
-movieInfo.apiKey = `7b4ee228270013c7be42d484778165ef`;
-//Base url for api endpoint
-movieInfo.baseURL = "https://api.themoviedb.org/3/";
-//Get movie id value from url passed from index page and remove search parameter
-// const movieId = (window.location.search).replace("?", "");
-const movieId = "4922";
-//Create a method To get single movie info
-movieInfo.getMovieInfo = () => {
-  //API End point with the movie Id
-  const endPoint = "movie/" + movieId;
-  const url = new URL(movieInfo.baseURL + endPoint);
-  url.search = new URLSearchParams({
-    api_key: movieInfo.apiKey,
-  })
-=======
 
 //API key
 movieInfo.apiKey = `7b4ee228270013c7be42d484778165ef`;
@@ -38,7 +22,6 @@ movieInfo.getMovieInfo = () => {
   })
 
   console.log(url);
->>>>>>> 488034f60888a171db8ed7f742f86e59a063b20f
   //Fetch data from api endpoint
   fetch(url)
     //Parse response into JSON and return response so it can be used
@@ -49,12 +32,6 @@ movieInfo.getMovieInfo = () => {
     .then((jsonResponse) => {
       //Pass actor id found from api call and genre passed to method to search for movies with both preferences
       console.log(jsonResponse)
-<<<<<<< HEAD
-    })
-}
-movieInfo.init = () => {
-  movieInfo.getMovieInfo()
-=======
       //Call the Method for displayInfo
       movieInfo.displayInfo(jsonResponse);
     })
@@ -170,6 +147,5 @@ button.addEventListener('click', toggle)
 movieInfo.init = () => {
   movieInfo.getMovieInfo();
   toggle();
->>>>>>> 488034f60888a171db8ed7f742f86e59a063b20f
 }
 movieInfo.init();
