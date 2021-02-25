@@ -277,18 +277,22 @@ body {
   border: none;
   font-size: 2.5rem;
   margin-top: 1.5rem;
-  background-color: #F1C93A;
+  background-color: #F64C72;
   color: white;
 }
 
 .index {
-  background-color: #032541;
-  color: #F1C93A;
+  background-color: #242582;
+  color: #FFFFFF;
 }
 
 .index header {
   text-align: center;
   padding-top: 10%;
+}
+
+.index header h2 {
+  font-family: "Bangers", serif;
 }
 
 .index .preferences {
@@ -329,7 +333,7 @@ body {
 }
 
 .index .results .movie h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "Bangers", serif;
   font-size: 2rem;
   text-align: center;
   margin: 1rem;

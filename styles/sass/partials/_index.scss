@@ -30,18 +30,22 @@
     border: none;
     font-size:2.5rem;
     margin-top: 1.5rem;
-    background-color: #F1C93A;
+    background-color: #F64C72;
     color:white;
     }
 }
 
 .index {
-    background-color: rgb(3,37,65);
-    color:#F1C93A;
+    background-color: #242582;
+    color:#FFFFFF;
 
     header {
         text-align: center;
         padding-top: 10%;
+
+        h2 {
+            font-family: $movie-title;
+        }
     }
 
     .preferences {
