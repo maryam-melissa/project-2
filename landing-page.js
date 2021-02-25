@@ -24,7 +24,6 @@ landingPage.getPopularMovies = () => {
 //Display Images on page
 landingPage.displayPopularMovies = (popularMovies) => {
   popularMovies.forEach(movie => {
-    console.log(movie);
     //Destructuring objects
     const { poster_path, title } = movie;
     //Image URL
@@ -38,7 +37,7 @@ landingPage.displayPopularMovies = (popularMovies) => {
     //Alt Attribute for an image
     image.alt = title;
     //Select div from Dom
-    const imageDiv = document.querySelector('.popularMoviesDisplayBox');
+    const imageDiv = document.querySelector('.popularMoviesDisplay');
     //Append image to an div 
     imageDiv.appendChild(image);
   });

@@ -241,11 +241,16 @@ body {
   margin: 0 auto;
 }
 
+body {
+  background-color: #242582;
+  color: #F64C72;
+}
+
 h1, h2, label, button {
   font-family: "Bangers", cursive;
 }
 
-p {
+p, input[type=text], select {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -253,8 +258,26 @@ h1 {
   font-size: 8rem;
 }
 
+h1, h2 {
+  letter-spacing: 3px;
+}
+
 h2 {
-  font-size: 3rem;
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+h4 {
+  font-style: italic;
+}
+
+label, p {
+  letter-spacing: 2px;
 }
 
 button {
@@ -267,49 +290,13 @@ button {
   color: white;
 }
 
-.moviePreferences {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin-top: 5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  letter-spacing: 3px;
-}
-
-.moviePreferences h2 {
-  font-size: 5rem;
-  margin-bottom: 3rem;
-}
-
-.moviePreferences fieldset {
-  width: 400px;
-}
-
-.moviePreferences input[type=text], .moviePreferences select {
-  width: 80%;
-  padding: 15px 20px;
-  margin: 15px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.index {
-  background-color: #242582;
-  color: #F64C72;
+img {
+  border-radius: 5px;
 }
 
 .index header {
   text-align: center;
-  padding-top: 5%;
+  padding-top: 2%;
 }
 
 .index .preferences {
@@ -346,7 +333,6 @@ button {
 
 .index .movie img {
   width: 100%;
-  border-radius: 5px;
 }
 
 .index .movie h2 {
@@ -365,12 +351,46 @@ button {
   color: white;
   font-family: "Bangers", cursive;
   font-size: 1.5rem;
+  letter-spacing: 0px;
+}
+
+.index .moviePreferences {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.index .moviePreferences h2 {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+}
+
+.index .moviePreferences fieldset {
+  width: 400px;
+}
+
+.index .moviePreferences input[type=text], .index .moviePreferences select {
+  width: 80%;
+  padding: 15px 20px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .landing-page {
-  background-color: #242582;
-  letter-spacing: 3px;
   color: #F64C72;
+  overflow-x: hidden;
 }
 
 .landing-page header {
@@ -390,8 +410,21 @@ button {
           align-items: center;
 }
 
+.landing-page h2 {
+  font-size: 3rem;
+}
+
+.landing-page .popularMoviesDisplay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.landing-page .popularMoviesDisplay img {
+  padding: 1%;
+}
+
 .movie-info {
-  background-color: #F1C93A;
   line-height: 1.4;
 }
 
@@ -417,7 +450,6 @@ button {
 }
 
 .movie-info .imgContainer img {
-  border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -426,7 +458,6 @@ button {
   padding-top: 5rem;
   max-width: 65%;
   width: 100%;
-  color: #032541;
 }
 
 .movie-info .textContainer button {
@@ -435,7 +466,11 @@ button {
   font-size: 3rem;
 }
 
-.movie-info .textContainer .genreInfo {
+.movie-info .textContainer p {
+  color: #FFFFFF;
+}
+
+.movie-info .genreInfo {
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -444,12 +479,12 @@ button {
   border-radius: 5px;
 }
 
-.movie-info .textContainer .genreInfo .genre {
+.movie-info .genreInfo .genre {
   font-style: italic;
   margin-right: 30px;
 }
 
-.movie-info .textContainer .productions-companies {
+.movie-info .productions-companies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,29 +492,15 @@ button {
   margin-top: 2rem;
 }
 
-.movie-info .textContainer .productions-companies .production-info {
+.movie-info .productions-companies .production-info {
   margin-right: 5rem;
   max-width: 200px;
 }
 
-.movie-info .textContainer .productions-companies .production-info img {
+.movie-info .productions-companies .production-info img {
   width: 40px;
 }
 
-.movie-info .textContainer .productions-companies .production-info p {
+.movie-info .productions-companies .production-info p {
   font-size: 1.2rem;
-}
-
-.movie-info h2 {
-  font-size: 5rem;
-}
-
-.movie-info h3 {
-  font-size: 2rem;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.movie-info h4 {
-  font-style: italic;
 }

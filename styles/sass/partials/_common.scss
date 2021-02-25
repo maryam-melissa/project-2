@@ -4,29 +4,54 @@
     margin: 0 auto;
 }
 
+body {
+    background-color: $primary-color;
+    color: $accent-color;
+}
+
 h1, h2, label, button {
     font-family: $primary-font;
 }
 
-p { 
+p, input[type=text], select { 
     font-family: $secondary-font;
 }
 
 h1 { 
     font-size: 8rem;
-  }
+}
+h1, h2 {
+    letter-spacing: 3px;
+}
 
 h2 {
-font-size: 3rem;
+    font-size: 4.8rem;
+}
+
+h3 {
+    font-size:2rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+h4 {
+    font-style: italic;
+}
+
+label, p {
+    letter-spacing: 2px;
 }
 
 button {
-    padding:1rem 1.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 5px;
     border: none;
-    font-size:2.5rem;
+    font-size: 2.5rem;
     margin-top: 1.5rem;
     background-color: $secondary-color;
     color:white;
 }
 
+img {
+    border-radius: 5px;
+}
