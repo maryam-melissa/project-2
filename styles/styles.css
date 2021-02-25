@@ -237,6 +237,7 @@ body {
 
 .moviePrefrences {
   height: 80vh;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,17 +245,18 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.moviePrefrences h3 {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
+.moviePrefrences h2 {
+  font-size: 5rem;
+  margin-bottom: 3rem;
 }
 
 .moviePrefrences fieldset {
@@ -273,11 +275,15 @@ body {
   padding: 1rem 1.5rem;
   border-radius: 5px;
   border: none;
-  margin-top: 1rem;
+  font-size: 2.5rem;
+  margin-top: 1.5rem;
+  background-color: #F1C93A;
+  color: white;
 }
 
 .index {
-  background-color: #f5d3d3;
+  background-color: #032541;
+  color: #F1C93A;
 }
 
 .index header {
@@ -333,7 +339,7 @@ body {
   position: absolute;
   bottom: 5%;
   right: -2%;
-  background-color: red;
+  background-color: #F1C93A;
   border-radius: 50%;
   padding: 2rem;
   color: white;
@@ -402,7 +408,7 @@ body {
 }
 
 .movie-info .imgContainer {
-  margin-right: 4rem;
+  margin-right: 5rem;
 }
 
 .movie-info .imgContainer img {
@@ -413,8 +419,9 @@ body {
 
 .movie-info .textContainer {
   padding-top: 5rem;
-  max-width: 55%;
+  max-width: 65%;
   width: 100%;
+  color: #032541;
 }
 
 .movie-info .textContainer button {
@@ -423,18 +430,39 @@ body {
   font-size: 3rem;
 }
 
-.movie-info .textContainer .productions_companies .productionCompanyEl {
+.movie-info .textContainer .genreInfo {
+  font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  padding: 1.5rem;
+  border-radius: 5px;
 }
 
-.movie-info .textContainer .productions_companies img {
-  width: 50px;
+.movie-info .textContainer .genreInfo .genre {
+  font-style: italic;
+  margin-right: 30px;
+}
+
+.movie-info .textContainer .productions-companies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.movie-info .textContainer .productions-companies .production-info {
+  margin-right: 5rem;
+  max-width: 200px;
+}
+
+.movie-info .textContainer .productions-companies .production-info img {
+  width: 40px;
+}
+
+.movie-info .textContainer .productions-companies .production-info p {
+  font-size: 1.2rem;
 }
 
 .movie-info h2 {
@@ -444,4 +472,9 @@ body {
 .movie-info h3 {
   font-size: 2rem;
   font-weight: 600;
+  font-style: italic;
+}
+
+.movie-info h4 {
+  font-style: italic;
 }

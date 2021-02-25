@@ -80,26 +80,34 @@ movieInfo.displayInfo = (info) => {
   const genresDetails = info.genres;
   //Loop through the array to get access to its properties
   genresDetails.forEach((movie) => {
+    //Create div for Each Genre Info
+    const singleGenreDiv = document.createElement('div');
+    //Give a Class to singleGenreDiv for CSS styling purposes
+    singleGenreDiv.classList.add('genre');
     //destructuring Array
     const { name, id } = movie;
     //update genre details (Name, Id)
     genreName.textContent = name;
     genreId.textContent = id;
+    //Append genre name and id into sinleGenreDiv 
+    singleGenreDiv.append(name, id);
     //Select div from Dom 
     const genreInfo = document.querySelector('.genreInfo');
-    //Append genres(Name, Id) to the div
-    genreInfo.append(name, id);
+    //Append singleGenreDiv to the genreInfo 
+    genreInfo.append(singleGenreDiv);
   });
-  //Create p tag element to show production companies
-  const productionCompanyEl = document.createElement('div');
   //Create variable to save company details init
   const productionCompanyDetails = info.production_companies;
   //Loop through productionCompanyDetails variable
   productionCompanyDetails.forEach((company) => {
+    //Create p tag element to show production companies
+    const productionCompanyEl = document.createElement('div');
+    //Add a class to productionCompanyEl for CSS styling purposes
+    productionCompanyEl.classList.add('production-info')
     //destructuring the array to get details
     const { id, logo_path, name, origin_country } = company;
     //Image URL
-    const url = `https://image.tmdb.org/t/p/w200/${company.logo_path}`;
+    const url = `https://image.tmdb.org/t/p/w200/${logo_path}`;
     //Create img element
     const logoPath = document.createElement('img');
     ////Add image path to image src attribute
@@ -121,7 +129,7 @@ movieInfo.displayInfo = (info) => {
     //append the all elements to div called productionCompanyEl
     productionCompanyEl.append(logoPath, companyName, companyId, originCountry);
     //div query selected from Dom
-    const productionsCompanies = document.querySelector('.productions_companies');
+    const productionsCompanies = document.querySelector('.productions-companies');
     //div called productionsCompanies append with productionCompanyEl
     productionsCompanies.prepend(productionCompanyEl)
   })
@@ -147,5 +155,6 @@ button.addEventListener('click', toggle)
 movieInfo.init = () => {
   movieInfo.getMovieInfo();
   toggle();
+
 }
 movieInfo.init();

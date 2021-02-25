@@ -1,16 +1,19 @@
 .moviePrefrences {
     height:80vh;
+    overflow: hidden;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 5rem;
     align-items: center;
 
-    h3 {
-        font-size: 3.5rem;
-        margin-bottom: 1.5rem;
+    h2 {
+        font-size: 5rem;
+        margin-bottom: 3rem;
     }
     fieldset {
         width:400px;
+
     }
 
     input[type=text], select {
@@ -20,16 +23,21 @@
         border: 1px solid #ccc;
         border-radius: 4px;
     }
+   
     .moviePickerBtn{
     padding:1rem 1.5rem;
     border-radius: 5px;
     border: none;
-    margin-top: 1rem;
+    font-size:2.5rem;
+    margin-top: 1.5rem;
+    background-color: #F1C93A;
+    color:white;
     }
 }
 
 .index {
-    background-color: rgb(245, 211, 211);
+    background-color: rgb(3,37,65);
+    color:#F1C93A;
 
     header {
         text-align: center;
@@ -73,13 +81,11 @@
                 position: absolute;
                 bottom: 5%;
                 right: -2%;
-                background-color: red;
+                background-color: #F1C93A;
                 border-radius: 50%;
                 padding: 2rem;
                 color: white;
-
             }
         }
-
     }
 }

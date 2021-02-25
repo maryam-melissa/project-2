@@ -17,8 +17,8 @@
     }
 
     .imgContainer {
-      margin-right: 4rem;
-    
+      margin-right: 5rem;
+
       img {
         border-radius: 5px;
         object-fit: cover;
@@ -27,8 +27,11 @@
 
     .textContainer {
       padding-top: 5rem;
-      max-width: 55%;
+      max-width: 65%;
       width:100%;
+      color:rgb(3,37,65);
+
+
     
       button {
         background-color: transparent;
@@ -36,21 +39,33 @@
         font-size: 3rem;
       }
 
-      .productions_companies {
-        .productionCompanyEl {
-          display:flex;
-          flex-direction: row;
-        }
-        img {
-          width:50px;
+      .genreInfo {
+        font-weight: bold;
+        display:flex;
+        padding:1.5rem;
+        border-radius: 5px;
+        .genre {
+          font-style: italic;
+          margin-right:30px;
         }
       }
 
+      .productions-companies {
+        display:flex;
+        padding:1rem 0;
+        margin-top: 2rem;
+        .production-info {
+          margin-right:5rem;
+        max-width:200px;
+          img {
+            width:40px;
+          }
+          p {
+            font-size: 1.2rem;
+          }
 
-
-
-
-
+        }
+      }
     }
 
     h2 {
@@ -59,6 +74,9 @@
     h3 {
       font-size:2rem;
       font-weight: 600;
+      font-style: italic;
     }
-
+    h4 {
+      font-style: italic;
+    }
 }
