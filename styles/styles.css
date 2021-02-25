@@ -252,11 +252,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Bangers", cursive;
+  letter-spacing: 3px;
 }
 
 .moviePrefrences h2 {
   font-size: 5rem;
   margin-bottom: 3rem;
+  font-family: "Bangers", cursive;
 }
 
 .moviePrefrences fieldset {
@@ -277,13 +280,14 @@ body {
   border: none;
   font-size: 2.5rem;
   margin-top: 1.5rem;
-  background-color: #F1C93A;
+  background-color: #553D67;
   color: white;
+  font-family: "Bangers", cursive;
 }
 
 .index {
-  background-color: #032541;
-  color: #F1C93A;
+  background-color: #242582;
+  color: #F64C72;
 }
 
 .index header {
@@ -346,7 +350,10 @@ body {
 }
 
 .landing-page {
-  background-color: #f5d3d3;
+  background-color: #242582;
+  font-family: "Bangers", cursive;
+  letter-spacing: 3px;
+  color: #F64C72;
 }
 
 .landing-page h1 {
@@ -377,6 +384,13 @@ body {
 .landing-page header .start-btn {
   padding: 1rem 2rem;
   font-size: 1.6rem;
+  background-color: #553D67;
+  color: #fff;
+  border: none;
+  padding: 1.5rem 3rem;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  font-family: "Bangers", cursive;
 }
 
 .wrapper {
