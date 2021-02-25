@@ -137,7 +137,7 @@ moviePicker.loadMovies = (movies, genre) => {
     //Get data for movie popularity
     const moviePopularity = document.createElement('p');
     //Add movie average to p element
-    moviePopularity.textContent = movie.vote_average * 10;
+    moviePopularity.textContent = movie.vote_average * 10 + '%';
 
     //Append image, title and popularity to div
     movieDiv.append(image, title, moviePopularity);

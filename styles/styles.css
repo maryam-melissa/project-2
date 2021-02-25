@@ -229,15 +229,45 @@ body {
   font-size: 2rem;
 }
 
+/*Colour Palette*/
+/*Primary Colour: #242582*/
+/*Secondary Colour: #553D67*/
+/*Accent Colour: #F64C72*/
+/*Font Colour: #FFFFFF*/
+/*Font Variables*/
 .wrapper {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
 }
 
-.moviePrefrences {
-  height: 80vh;
-  overflow: hidden;
+h1, h2, label, button {
+  font-family: "Bangers", cursive;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-size: 8rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+button {
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 2.5rem;
+  margin-top: 1.5rem;
+  background-color: #553D67;
+  color: white;
+}
+
+.moviePreferences {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,37 +282,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Bangers", cursive;
   letter-spacing: 3px;
 }
 
-.moviePrefrences h2 {
+.moviePreferences h2 {
   font-size: 5rem;
   margin-bottom: 3rem;
-  font-family: "Bangers", cursive;
 }
 
-.moviePrefrences fieldset {
+.moviePreferences fieldset {
   width: 400px;
 }
 
-.moviePrefrences input[type=text], .moviePrefrences select {
+.moviePreferences input[type=text], .moviePreferences select {
   width: 80%;
   padding: 15px 20px;
   margin: 15px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
-}
-
-.moviePrefrences .moviePickerBtn {
-  padding: 1rem 1.5rem;
-  border-radius: 5px;
-  border: none;
-  font-size: 2.5rem;
-  margin-top: 1.5rem;
-  background-color: #553D67;
-  color: white;
-  font-family: "Bangers", cursive;
 }
 
 .index {
@@ -292,11 +309,7 @@ body {
 
 .index header {
   text-align: center;
-  padding-top: 10%;
-}
-
-.index header h2 {
-  font-family: "Playfair Display", serif;
+  padding-top: 5%;
 }
 
 .index .preferences {
@@ -325,47 +338,39 @@ body {
       flex-wrap: wrap;
 }
 
-.index .results .movie {
+.index .movie {
   width: calc(33% - 5%);
   margin: 2%;
   position: relative;
 }
 
-.index .results .movie img {
+.index .movie img {
   width: 100%;
   border-radius: 5px;
 }
 
-.index .results .movie h2 {
-  font-family: "Playfair Display", serif;
+.index .movie h2 {
   font-size: 2rem;
   text-align: center;
   margin: 1rem;
 }
 
-.index .results .movie p {
+.index .movie p {
   position: absolute;
   bottom: 5%;
   right: -2%;
-  background-color: #F1C93A;
+  background-color: #553D67;
   border-radius: 50%;
   padding: 2rem;
   color: white;
+  font-family: "Bangers", cursive;
+  font-size: 1.5rem;
 }
 
 .landing-page {
   background-color: #242582;
-  font-family: "Bangers", cursive;
   letter-spacing: 3px;
   color: #F64C72;
-}
-
-.landing-page h1 {
-  font-size: 8rem;
-}
-
-.landing-page h2 {
-  font-size: 3rem;
 }
 
 .landing-page header {
@@ -383,24 +388,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.landing-page header .start-btn {
-  padding: 1rem 2rem;
-  font-size: 1.6rem;
-  background-color: #553D67;
-  color: #fff;
-  border: none;
-  padding: 1.5rem 3rem;
-  margin-top: 2rem;
-  font-size: 2.5rem;
-  font-family: "Bangers", cursive;
-}
-
-.wrapper {
-  max-width: 1200px;
-  width: 85%;
-  margin: 0 auto;
 }
 
 .movie-info {

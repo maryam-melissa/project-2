@@ -13,7 +13,7 @@ const movieId = (window.location.search).replace("?", "");
 //Create a method To get single movie info
 movieInfo.getMovieInfo = () => {
   //API End point with the movie Id
-  const endPoint = "movie/" + "4922";
+  const endPoint = "movie/" + "4922"; //REMOVE HARD CODED ID WHEN SUBMITTING
   // URL Constructor
   const url = new URL(movieInfo.baseURL + endPoint);
   //URL Parameter
@@ -21,7 +21,6 @@ movieInfo.getMovieInfo = () => {
     api_key: movieInfo.apiKey,
   })
 
-  console.log(url);
   //Fetch data from api endpoint
   fetch(url)
     //Parse response into JSON and return response so it can be used
@@ -80,21 +79,21 @@ movieInfo.displayInfo = (info) => {
   const genresDetails = info.genres;
   //Loop through the array to get access to its properties
   genresDetails.forEach((movie) => {
-    //Create div for Each Genre Info
-    const singleGenreDiv = document.createElement('div');
-    //Give a Class to singleGenreDiv for CSS styling purposes
-    singleGenreDiv.classList.add('genre');
-    //destructuring Array
-    const { name, id } = movie;
-    //update genre details (Name, Id)
-    genreName.textContent = name;
-    genreId.textContent = id;
-    //Append genre name and id into sinleGenreDiv 
-    singleGenreDiv.append(name, id);
-    //Select div from Dom 
-    const genreInfo = document.querySelector('.genreInfo');
-    //Append singleGenreDiv to the genreInfo 
-    genreInfo.append(singleGenreDiv);
+  //Create div for Each Genre Info
+  const singleGenreDiv = document.createElement('div');
+  //Give a Class to singleGenreDiv for CSS styling purposes
+  singleGenreDiv.classList.add('genre');
+  //destructuring Array
+  const { name, id } = movie;
+  //update genre details (Name, Id)
+  genreName.textContent = name;
+  genreId.textContent = id;
+  //Append genre name and id into sinleGenreDiv 
+  singleGenreDiv.append(name, id);
+  //Select div from Dom 
+  const genreInfo = document.querySelector('.genreInfo');
+  //Append singleGenreDiv to the genreInfo 
+  genreInfo.append(singleGenreDiv);
   });
   //Create variable to save company details init
   const productionCompanyDetails = info.production_companies;
@@ -141,7 +140,7 @@ movieInfo.displayInfo = (info) => {
 const whiteHeart = '\u2661';
 const blackHeart = '\u2665';
 const button = document.querySelector('button');
-//Function for heart Toggle
+//Function for heart toggle
 const toggle = () => {
   const like = button.textContent;
   if (like === whiteHeart) {

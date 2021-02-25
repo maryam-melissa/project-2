@@ -1,31 +1,13 @@
 .landing-page {
-  background-color:$primary-color;
-  font-family:$font-family;
+  background-color: $primary-color;
   letter-spacing: 3px;
   color:$accent-color;
-  h1{
-    font-size: 8rem;
-  }
-  h2 {
-    font-size: 3rem;
-  }
+
   header {
-    height:100vh;
-    display:flex;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
-    .start-btn {
-      padding:1rem 2rem;
-      font-size: 1.6rem;
-      background-color: $secondary-color;
-      color:$base-font-color;
-      border:none;
-      padding:1.5rem 3rem;
-      margin-top: 2rem;
-      font-size: 2.5rem;
-      font-family: $font-family;
-    }
   }
 }
