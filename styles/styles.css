@@ -242,8 +242,9 @@ body {
 }
 
 body {
-  background-color: #242582;
-  color: #F64C72;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ce1e1e), to(#000000));
+  background: linear-gradient(#ce1e1e, #000000);
+  color: white;
 }
 
 h1, h2, label, button {
@@ -256,6 +257,7 @@ p, input[type=text], select {
 
 h1 {
   font-size: 8rem;
+  color: white;
 }
 
 h1, h2 {
@@ -264,6 +266,7 @@ h1, h2 {
 
 h2 {
   font-size: 4.8rem;
+  color: white;
 }
 
 h3 {
@@ -281,17 +284,25 @@ label, p {
 }
 
 button {
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.5rem;
   border-radius: 5px;
   border: none;
   font-size: 2.5rem;
   margin-top: 1.5rem;
-  background-color: #553D67;
-  color: white;
+  background-color: white;
+  color: red;
 }
 
 img {
   border-radius: 5px;
+}
+
+span {
+  font-size: 12rem;
+}
+
+.index {
+  background: #ce1e1e;
 }
 
 .index header {
@@ -395,6 +406,7 @@ img {
 
 .landing-page header {
   height: 100vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,6 +420,8 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ce1e1e), to(#000000));
+  background: linear-gradient(#ce1e1e, #000000);
 }
 
 .landing-page h2 {
@@ -425,6 +439,8 @@ img {
 }
 
 .movie-info {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ce1e1e), to(#000000));
+  background: linear-gradient(#ce1e1e, #000000);
   line-height: 1.4;
 }
 

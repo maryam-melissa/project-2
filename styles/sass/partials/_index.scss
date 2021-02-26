@@ -1,5 +1,6 @@
 .index {
-
+// background-color: #a8d4dc;
+background:#ce1e1e;
     header {
         text-align: center;
         padding-top: 2%;
@@ -9,6 +10,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        
         
         .genre {
             width: 250px;
@@ -55,7 +57,7 @@
         justify-content: flex-start;
         margin-top: 5rem;
         align-items: center;
-        // letter-spacing: 3px;
+        
     
         h2 {
             font-size: 5rem;
@@ -64,7 +66,6 @@
         
         fieldset {
             width: 400px;
-    
         }
     
         input[type=text], select {
@@ -74,6 +75,5 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-       
     }
 }

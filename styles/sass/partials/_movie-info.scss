@@ -1,6 +1,30 @@
   .movie-info {
   // background-color: #F1C93A;
+  background: linear-gradient( #ce1e1e, #000000);
   line-height: 1.4;
+  // animation: result 16s ease-in-out infinite;
+
+
+  // @keyframes result {
+  //   0% {
+  //     background:#de725d;
+  //   }
+  //   20% {
+  //     background:#b4fffe;
+  //   }
+  //   40% {
+  //     background:#fbffe6;
+  //   }
+  //   60% {
+  //     background:#a5b1d3;
+  //   }
+  //   80% {
+  //     background:(#dca1c1);
+  //   }
+  //   100% {
+  //     background: (#f8fed5);
+  //   }
+  // }
 
   .movieInfoContainer {
     display:flex;

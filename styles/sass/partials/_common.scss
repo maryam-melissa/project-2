@@ -4,10 +4,14 @@
     margin: 0 auto;
 }
 
+
 body {
-    background-color: $primary-color;
-    color: $accent-color;
+    //background-color: $primary-color;
+    background: linear-gradient( #ce1e1e, #000000);
+    // color: rgb(48, 47, 47);
+    color:white;
 }
+
 
 h1, h2, label, button {
     font-family: $primary-font;
@@ -17,8 +21,18 @@ p, input[type=text], select {
     font-family: $secondary-font;
 }
 
+// @keyframes myfirst {
+//   0%   {color:red; left:0px; top:0px;}
+//   25%  {color:yellow; left:200px; top:0px;}
+//   50%  {color:blue; left:200px; top:200px;}
+//   75%  {color:green; left:0px; top:200px;}
+//   100% {color:red; left:0px; top:0px;}
+// }
+
 h1 { 
     font-size: 8rem;
+    color:white;
+    // animation: myfirst 5s linear 2s infinite alternate;s
 }
 h1, h2 {
     letter-spacing: 3px;
@@ -26,6 +40,7 @@ h1, h2 {
 
 h2 {
     font-size: 4.8rem;
+    color:white;
 }
 
 h3 {
@@ -43,15 +58,19 @@ label, p {
 }
 
 button {
-    padding: 1rem 1.5rem;
+    padding: 1rem 2.5rem;
     border-radius: 5px;
     border: none;
     font-size: 2.5rem;
     margin-top: 1.5rem;
-    background-color: $secondary-color;
-    color:white;
+    background-color:white;
+    // background-color:#000;
+    color:red;
 }
 
 img {
     border-radius: 5px;
+}
+span {
+    font-size: 12rem;
 }
