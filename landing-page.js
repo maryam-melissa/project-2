@@ -41,9 +41,7 @@ landingPage.displayPopularMovies = (popularMovies) => {
     //Append image to an div 
     imageDiv.appendChild(image);
   });
-
 }
-
 
 //Store button to add event listener to
 const button = document.querySelector('.start-btn');

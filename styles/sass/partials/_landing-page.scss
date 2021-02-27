@@ -9,31 +9,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient( #ce1e1e, #000000);
-    // animation: animate 16s ease-in-out infinite;
-  }
-  // @keyframes animate {
-  //   0% {
-  //     background: linear-gradient(#fbffe6, #eb9a80);
-  //   }
-  //   20% {
-  //     background: linear-gradient(#a8d4dc, #b4fffe);
-  //   }
-  //   40% {
-  //     background: linear-gradient(#de725d, #a5b1d3);
-  //   }
-  //   60% {
-  //     background: linear-gradient( #ebbfb1,  #d3fcff);
-  //   }
-  //   80% {
-  //     background: linear-gradient(#f0eeac, #dca1c1);
-  //   }
-  //   100% {
-  //     background: linear-gradient( #dfcbff, #f8fed5);
-  //   }
-  // }
-  h2 {
+    background: linear-gradient($primary-color, $secondary-color);
+
+    h1{
+      color:$accent-color;
+    }
+
+    h2 {
     font-size: 3rem;
+    }
+
   }
 
   .popularMoviesDisplay {
