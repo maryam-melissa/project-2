@@ -354,7 +354,7 @@ span {
   position: absolute;
   bottom: 5%;
   right: -2%;
-  background-color: #7700a6;
+  background-color: #005678;
   border-radius: 50%;
   padding: 2rem;
   color: white;
@@ -418,8 +418,8 @@ span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(#01012b), to(#7700a6));
-  background: linear-gradient(#01012b, #7700a6);
+  background: -webkit-gradient(linear, left top, left bottom, from(#01012b), to(#005678));
+  background: linear-gradient(#01012b, #005678);
 }
 
 .landing-page header h1 {
