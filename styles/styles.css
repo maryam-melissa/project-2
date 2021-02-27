@@ -256,15 +256,13 @@ p, input[type=text], select {
 h1 {
   font-size: 8rem;
   color: white;
-}
-
-h1, h2 {
-  letter-spacing: 3px;
+  letter-spacing: 8px;
 }
 
 h2 {
   font-size: 4.8rem;
   color: white;
+  letter-spacing: 5px;
 }
 
 h3 {
@@ -287,12 +285,13 @@ button {
   border: none;
   font-size: 2.5rem;
   margin-top: 1.5rem;
-  background-color: #ff2a6d;
-  color: #d1f7ff;
+  background-color: #55FCF1;
+  color: #071e3d;
 }
 
 img {
   border-radius: 5px;
+  width: 100%;
 }
 
 span {
@@ -400,9 +399,11 @@ span {
 .landing-page {
   color: #ff2a6d;
   overflow-x: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#278ea5), to(#071e3d));
+  background: linear-gradient(#278ea5, #071e3d);
 }
 
-.landing-page header {
+.landing-page main {
   height: 100vh;
   width: 100%;
   display: -webkit-box;
@@ -418,17 +419,17 @@ span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#01012b));
-  background: linear-gradient(black, #01012b);
 }
 
-.landing-page header h1 {
-  color: #05d9e8;
+.landing-page h1 {
+  text-shadow: 0 -1px 6px #05d9e8, 0 10px 10px rgba(0, 0, 0, 0.75);
+  color: #66FCF1;
 }
 
-.landing-page header h2 {
-  font-size: 3rem;
-  font-weight: bolder;
+.landing-page h2 {
+  font-size: 2.4rem;
+  color: #d1f7ff;
+  font-family: "Barlow", cursive;
 }
 
 .landing-page .popularMoviesDisplay {
@@ -438,27 +439,31 @@ span {
   display: flex;
   -webkit-animation: slideshow 25s linear infinite;
           animation: slideshow 25s linear infinite;
-}
-
-.landing-page .popularMoviesDisplay img {
-  width: 15%;
-  padding: 1%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @-webkit-keyframes slideshow {
   0% {
-    margin-left: 100%;
+    margin-left: 200%;
+  }
+  100% {
+    margin-left: -200%;
   }
 }
 
 @keyframes slideshow {
   0% {
-    margin-left: 100%;
+    margin-left: 200%;
+  }
+  100% {
+    margin-left: -200%;
   }
 }
 
-.landing-page h2 {
-  font-size: 3rem;
+.landing-page .movieImage {
+  margin: 20px 20px;
 }
 
 .movie-info {

@@ -1,70 +1,47 @@
 .landing-page {
   color: $accent-color;
   overflow-x: hidden;
+  background: linear-gradient(#278ea5, #071e3d);
 
-  header {
+  main {
     height: 100vh;
     width:100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient( #ce1e1e, #000000);
-    // animation: animate 16s ease-in-out infinite;
   }
-  // @keyframes animate {
-  //   0% {
-  //     background: linear-gradient(#fbffe6, #eb9a80);
-  //   }
-  //   20% {
-  //     background: linear-gradient(#a8d4dc, #b4fffe);
-  //   }
-  //   40% {
-  //     background: linear-gradient(#de725d, #a5b1d3);
-  //   }
-  //   60% {
-  //     background: linear-gradient( #ebbfb1,  #d3fcff);
-  //   }
-  //   80% {
-  //     background: linear-gradient(#f0eeac, #dca1c1);
-  //   }
-  //   100% {
-  //     background: linear-gradient( #dfcbff, #f8fed5);
-  //   }
-  // }
-    background: linear-gradient($primary-color, $secondary-color);
 
-    h1{
-      color:$accent-color;
-    }
+  h1{
+    // color: $accent-color;
+    text-shadow: 0 -1px 6px $secondary-color, 0 10px 10px rgba(0, 0, 0, 0.75);
+    // color: $secondary-color;
+    color: #66FCF1;
+  }
 
-    h2 {
-    font-size: 3rem;
-    }
-
+  h2 {
+  font-size: 2.4rem;
+  color: $base-font-color;
+  font-family: $tertiary-font;
   }
 
   .popularMoviesDisplay {
     width: 300%;
     display: flex;
     animation: slideshow 25s linear infinite;
-
-    img {
-      width: 15%;
-      padding: 1%;
-    }
+    justify-content: space-between;
   }
-
-  
 
   @keyframes slideshow {
     0% {
-      margin-left: 100%;
+      margin-left: 200%;
+    }
+    100% {
+      margin-left: -200%;
+    }
   }
 
-
-  h2 {
-    font-size: 3rem;
+  .movieImage {
+    margin: 20px 20px;
   }
-
 }
