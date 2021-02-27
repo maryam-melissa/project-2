@@ -1,0 +1,30 @@
+//Media Query Mixins
+@mixin largeLaptopMQ {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin laptopMQ {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin tabletMQ {
+    @media (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin largePhoneMQ {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin smallPhoneMQ {
+    @media (max-width: 450px) {
+        @content;
+    }
+}

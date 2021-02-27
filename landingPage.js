@@ -38,7 +38,9 @@ landingPage.displayPopularMovies = (popularMovies) => {
     //Append url to an image
     image.src = url;
     //Alt Attribute for an image
-    image.alt = title;
+    image.alt = title + ' movie poster';
+    //Set aria hidden to true so screen reader does not read
+    image.setAttribute('aria-hidden', 'true');
     //Select div from Dom
     const imageDiv = document.querySelector('.popularMoviesDisplay');
     //Append image to an div 
@@ -47,7 +49,7 @@ landingPage.displayPopularMovies = (popularMovies) => {
 }
 
 //Store button to add event listener to
-const button = document.querySelector('.start-btn');
+const button = document.querySelector('.startBtn');
 
 //Event listener to listen for button click
 button.addEventListener('click', function (event) {

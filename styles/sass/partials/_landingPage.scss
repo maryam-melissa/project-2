@@ -1,7 +1,5 @@
-.landing-page {
-  color: $accent-color;
+.landingPage {
   overflow-x: hidden;
-  background: linear-gradient(#278ea5, #071e3d);
 
   main {
     height: 100vh;
@@ -12,37 +10,30 @@
     align-items: center;
   }
 
-  h1{
-    // color: $accent-color;
-    text-shadow: 0 -1px 6px $secondary-color, 0 10px 10px rgba(0, 0, 0, 0.75);
-    // color: $secondary-color;
-    color: #66FCF1;
-  }
-
   h2 {
   font-size: 2.4rem;
-  color: $base-font-color;
+  color: $secondary-color;
   font-family: $tertiary-font;
   }
 
   .popularMoviesDisplay {
     width: 300%;
     display: flex;
-    animation: slideshow 25s linear infinite;
+    animation: slideshow 30s linear infinite;
     justify-content: space-between;
   }
 
   @keyframes slideshow {
     0% {
-      margin-left: 200%;
+      margin-left: 205%;
     }
     100% {
-      margin-left: -200%;
+      margin-left: -205%;
     }
   }
 
   .movieImage {
-    margin: 20px 20px;
+    margin: 20px 15px;
   }
 
   .popularMoviesDisplay:hover {
