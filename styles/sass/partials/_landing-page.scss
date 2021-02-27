@@ -9,10 +9,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient($primary-color, $secondary-color);
-
-    h1{
-      color:$accent-color;
+    background: linear-gradient(black,$primary-color);
+    h1 {
+      color:$secondary-color;
     }
 
     h2 {
