@@ -14,11 +14,12 @@ const form = document.querySelector('form');
 form.addEventListener('submit', function (event) {
   //Prevents page from refreshing
   event.preventDefault();
-
   //Get actor input from user
   const actorInput = document.querySelector("input[type=text]").value;
   //Get genre option selected by user
   const genreInput = document.querySelector("select");
+  const changeHeight = document.querySelector("body");
+  changeHeight.style.height = "100%";
   //Call method to get the actor id of the actor searched for by user
   moviePicker.getActorId(actorInput, genreInput.selectedOptions[0].value);
 });
@@ -139,21 +140,22 @@ moviePicker.loadMovies = (movies, genre) => {
     //Add image path to image src attribute
     image.src = url;
     //Add movie title image description to alt attribute
-    image.alt = title;
+    image.alt = title + ' movie poster';
+    //Set image id to movie id
     image.id = id;
 
     //Create an h2 element for the title
-    const movieTitle = document.createElement('h2');
+    const movieTitle = document.createElement('h3');
     //Update the text of h2 with the movie.title
     movieTitle.textContent = title;
 
     //Get data for movie popularity
     const moviePopularity = document.createElement('p');
     //Add movie average to p element
-    moviePopularity.textContent = vote_average * 10 + '%';
+    moviePopularity.textContent = (vote_average * 10) + '%';
 
     //Append image, title and popularity to div
-    movieDiv.append(image, title, moviePopularity);
+    movieDiv.append(image, movieTitle, moviePopularity);
     //Append div to results div
     results.append(movieDiv);
   });

@@ -8,22 +8,25 @@
     <!-- Stylesheet Link -->
     <link rel="stylesheet" href="./styles/styles.css">
     <!-- Google Font Link -->
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap" rel="stylesheet"> 
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&family=Barlow&display=swap" 
+        rel="stylesheet">
+    <title>Flix Finder</title>
 </head>
 
 <body class="index">
+    <!--Header-->
     <header>
         <h1>Flix Finder</h1>
+        <!--Form-->
         <form action="">
             <div class="moviePreferences">
                 <h2>Choose Your Preferences</h2>
                 <fieldset>
-                    <label for="actorName">Actor </label>
-                    <input type="text" id="actorName" placeholder="Select Your Favourite Actor✌️">
+                    <label class="visuallyHidden" for="actorName">Actor </label>
+                    <input type="text" name="actorName" id="actorName" placeholder="Select Your Favourite Actor✌️">
                 </fieldset>
-                <fieldset class="custom-select">
-                    <label for="genre">Genre </label>
+                <fieldset>
+                    <label class="visuallyHidden" for="genre">Genre </label>
                     <select name="genre" id="genre" class="genre">
                         <option value="0">Select genre..</option>
                         <!--Dynamically add genres-->
@@ -32,13 +35,17 @@
                 <button type="submit" class="moviePickerBtn">Pick a Movie</button>
             </div>
         </form>
+        <!--End of Form-->
     </header>
+    <!--End of Header-->
 
+    <!--Main-->
     <main>
         <div class="results wrapper">
             <!--Add results dynamically-->
         </div>
     </main>
+    <!--End of Main-->
     <script src="./index.js"></script>
 </body>
 
