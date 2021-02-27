@@ -16,12 +16,11 @@ form.addEventListener('submit', function (event) {
   event.preventDefault();
 
   //Get actor input from user
-  const actorInput = document.querySelector("input[type=text]");
-
+  const actorInput = document.querySelector("input[type=text]").value;
   //Get genre option selected by user
   const genreInput = document.querySelector("select");
   //Call method to get the actor id of the actor searched for by user
-  moviePicker.getActorId(actorInput.value, genreInput.selectedOptions[0].value);
+  moviePicker.getActorId(actorInput, genreInput.selectedOptions[0].value);
 });
 
 /****API Method Calls****/
@@ -46,8 +45,13 @@ moviePicker.getActorId = (name, genre) => {
     })
     //Parse JSON promise response
     .then((jsonResponse) => {
+      console.log(jsonResponse);
       //Pass actor id found from api call and genre passed to method to search for movies with both preferences
       moviePicker.getFilteredMovies(jsonResponse.results[0].id, genre);
+      //Error Handler
+    }).catch((error) => {
+      console.log('Error Has Occured', error);
+      alert('Please Select Your Favourite Actor Name And Genre');
     })
 };
 
@@ -75,6 +79,10 @@ moviePicker.getFilteredMovies = (actorId, genre) => {
       //Call method to load results to Html page
       console.log(jsonResponse.results);
       moviePicker.loadMovies(jsonResponse.results, genre);
+      //Error Handler
+    }).catch((error) => {
+      console.log('Error Has Occured', error);
+      alert('Please Select Actor Name and Genre From Dropdown Menu 🙂🤘🏾');
     })
 };
 
@@ -99,6 +107,10 @@ moviePicker.getGenre = () => {
     .then((jsonResponse) => {
       //Call method to load data into form select
       moviePicker.loadGenreData(jsonResponse.genres);
+      //Error Handler
+    }).catch((error) => {
+      console.log('Error Has Occured', error);
+      alert('Error Has Occured');
     })
 };
 
@@ -112,6 +124,8 @@ moviePicker.loadMovies = (movies, genre) => {
   results.innerHTML = '';
   //Loop through each movie item we got from API
   movies.forEach((movie) => {
+    //Object Destructuring
+    const { title, id, poster_path, vote_average } = movie;
     // if (movie.src) {
     // Create a div element to wrap each movie
     const movieDiv = document.createElement('div');
@@ -119,24 +133,24 @@ moviePicker.loadMovies = (movies, genre) => {
     movieDiv.classList.add('movie');
 
     //Image path retrieved from api
-    const url = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
+    const url = `https://image.tmdb.org/t/p/w500/${poster_path}`;
     // Create an img element
     const image = document.createElement('img');
     //Add image path to image src attribute
     image.src = url;
     //Add movie title image description to alt attribute
-    image.alt = movie.title;
-    image.id = movie.id;
+    image.alt = title;
+    image.id = id;
 
     //Create an h2 element for the title
-    const title = document.createElement('h2');
+    const movieTitle = document.createElement('h2');
     //Update the text of h2 with the movie.title
-    title.textContent = movie.title;
+    movieTitle.textContent = title;
 
     //Get data for movie popularity
     const moviePopularity = document.createElement('p');
     //Add movie average to p element
-    moviePopularity.textContent = movie.vote_average * 10 + '%';
+    moviePopularity.textContent = vote_average * 10 + '%';
 
     //Append image, title and popularity to div
     movieDiv.append(image, title, moviePopularity);
@@ -171,15 +185,16 @@ moviePicker.loadMovies = (movies, genre) => {
 moviePicker.loadGenreData = (genres) => {
   //Find the dropdown selector
   const selectForm = document.querySelector('select');
-
   //For each genre in genres array
   genres.forEach(genre => {
     //Create option element
     const option = document.createElement('option');
+    //Destructuring Object
+    const { id, name } = genre;
     //Set value of option to genre id
-    option.value = genre.id;
+    option.value = id;
     //Set inner html to genre name
-    option.innerHTML = genre.name;
+    option.innerHTML = name;
     //Append option to select element
     selectForm.appendChild(option);
   });

@@ -19,6 +19,9 @@ landingPage.getPopularMovies = () => {
     }).then((jsonResponse) => {
       //calling (landingPage.displayPopularMovies) method 
       landingPage.displayPopularMovies(jsonResponse.results);
+    }).catch((error) => {
+      console.log('error');
+      alert('404 ERROR')
     })
 }
 //Display Images on page
