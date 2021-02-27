@@ -20,7 +20,6 @@ form.addEventListener('submit', function (event) {
 
   //Get genre option selected by user
   const genreInput = document.querySelector("select");
-
   //Call method to get the actor id of the actor searched for by user
   moviePicker.getActorId(actorInput.value, genreInput.selectedOptions[0].value);
 });
@@ -36,7 +35,7 @@ moviePicker.getActorId = (name, genre) => {
   url.search = new URLSearchParams({
     api_key: moviePicker.apiKey,
     //Query: name of actor
-    query: name
+    query: name,
   })
 
   //Fetch data from api endpoint
