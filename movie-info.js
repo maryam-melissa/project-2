@@ -33,6 +33,10 @@ movieInfo.getMovieInfo = () => {
       console.log(jsonResponse)
       //Call the Method for displayInfo
       movieInfo.displayInfo(jsonResponse);
+      //Error Handler
+    }).catch((error) => {
+      console.log('Error Has Occured', error);
+      alert('Error Has Occured');
     })
 }
 
