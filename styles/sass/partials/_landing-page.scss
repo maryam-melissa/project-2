@@ -44,4 +44,8 @@
   .movieImage {
     margin: 20px 20px;
   }
+
+  .popularMoviesDisplay:hover {
+    animation-play-state: paused;
+  }
 }

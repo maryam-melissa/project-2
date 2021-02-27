@@ -466,6 +466,11 @@ span {
   margin: 20px 20px;
 }
 
+.landing-page .popularMoviesDisplay:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
 .movie-info {
   background-color: black;
   line-height: 1.4;
