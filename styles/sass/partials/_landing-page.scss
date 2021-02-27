@@ -32,15 +32,31 @@
   //     background: linear-gradient( #dfcbff, #f8fed5);
   //   }
   // }
+
+  .popularMoviesDisplay {
+    width: 300%;
+    display: flex;
+    animation: slideshow 25s linear infinite;
+
+    img {
+      width: 15%;
+      padding: 1%;
+    }
+  }
+
+  
+
+  @keyframes slideshow {
+    0% {
+      margin-left: 100%;
+  }
+
+
+  }
+
+
   h2 {
     font-size: 3rem;
   }
 
-  .popularMoviesDisplay {
-    display: flex;
-
-    img {
-      padding: 1%;
-    }
-  }
 }

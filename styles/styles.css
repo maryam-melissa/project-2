@@ -424,18 +424,34 @@ span {
   background: linear-gradient(#ce1e1e, #000000);
 }
 
-.landing-page h2 {
-  font-size: 3rem;
-}
-
 .landing-page .popularMoviesDisplay {
+  width: 300%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-animation: slideshow 25s linear infinite;
+          animation: slideshow 25s linear infinite;
 }
 
 .landing-page .popularMoviesDisplay img {
+  width: 15%;
   padding: 1%;
+}
+
+@-webkit-keyframes slideshow {
+  0% {
+    margin-left: 100%;
+  }
+}
+
+@keyframes slideshow {
+  0% {
+    margin-left: 100%;
+  }
+}
+
+.landing-page h2 {
+  font-size: 3rem;
 }
 
 .movie-info {
