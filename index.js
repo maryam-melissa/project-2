@@ -177,7 +177,7 @@ moviePicker.loadMovies = (movies, genre) => {
       //Store movie id
       const movieId = movieImage.id;
       //Redirect page to movie-info page and pass movie id
-      window.location.href = "./movie-info.html" + '?' + movieId;
+      window.location.href = "./movieInfo.html" + '?' + movieId;
     })
   })
 };

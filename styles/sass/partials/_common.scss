@@ -12,28 +12,28 @@
 
 body {
     color:white;
-    background: linear-gradient($background-color, $tertiary-color);
+    background: linear-gradient($backgroundColor, $tertiaryColor);
 }
 
 
 h1, label, button {
-    font-family: $primary-font;
+    font-family: $primaryFont;
 }
 
 p { 
-    font-family: $secondary-font;
+    font-family: $secondaryFont;
 }
 
 input[type=text], select, option {
-    font-family: $tertiary-font;
+    font-family: $tertiaryFont;
 }
 
 
 h1 { 
     font-size: 8rem;
-    color: $primary-color;
+    color: $primaryColor;
     letter-spacing: 8px;
-    text-shadow: 0 -1px 6px $primary-color, 0 6px 10px $tertiary-color;
+    text-shadow: 0 -1px 6px $primaryColor, 0 6px 10px $tertiaryColor;
     margin-bottom: 5px;
 }
 
@@ -43,11 +43,11 @@ h2 {
     color:white;
     letter-spacing: 2px;
     margin-bottom: 15px;
-    color: $secondary-color;
+    color: $secondaryColor;
 }
 
 h3 {
-    font-family: $tertiary-font;
+    font-family: $tertiaryFont;
     font-size:2rem;
     font-weight: 600;
     // font-style: italic;
@@ -67,13 +67,13 @@ button {
     border: none;
     font-size: 2.5rem;
     margin-top: 1.5rem;
-    background-color: $primary-color;
-    color: $tertiary-color;
+    background-color: $primaryColor;
+    color: $tertiaryColor;
     letter-spacing: 1.5px;
 }
 
 button:hover, button:focus {
-    background-color: darken($primary-color, 20%);
+    background-color: darken($primaryColor, 20%);
 }
 
 img {

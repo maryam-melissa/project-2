@@ -78,7 +78,6 @@ movieInfo.displayInfo = (info) => {
   movieRunTime.textContent = info.runtime;
   //Create p tags element for genre Name and Id to show it onto the page
   const genreName = document.createElement('p');
-  const genreId = document.createElement('p');
   //Put genre array details into variable
   const genresDetails = info.genres;
   //Loop through the array to get access to its properties
@@ -88,12 +87,11 @@ movieInfo.displayInfo = (info) => {
     //Give a Class to singleGenreDiv for CSS styling purposes
     singleGenreDiv.classList.add('genre');
     //destructuring Array
-    const { name, id } = movie;
+    const { name } = movie;
     //update genre details (Name, Id)
     genreName.textContent = name;
-    genreId.textContent = id;
     //Append genre name and id into sinleGenreDiv 
-    singleGenreDiv.append(name, id);
+    singleGenreDiv.append(name);
     //Select div from Dom 
     const genreInfo = document.querySelector('.genreInfo');
     //Append singleGenreDiv to the genreInfo 
@@ -106,7 +104,7 @@ movieInfo.displayInfo = (info) => {
     //Create p tag element to show production companies
     const productionCompanyEl = document.createElement('div');
     //Add a class to productionCompanyEl for CSS styling purposes
-    productionCompanyEl.classList.add('production-info')
+    productionCompanyEl.classList.add('productionInfo')
     //destructuring the array to get details
     const { id, logo_path, name, origin_country } = company;
     //Image URL
@@ -132,7 +130,7 @@ movieInfo.displayInfo = (info) => {
     //append the all elements to div called productionCompanyEl
     productionCompanyEl.append(logoPath, companyName, companyId, originCountry);
     //div query selected from Dom
-    const productionsCompanies = document.querySelector('.productions-companies');
+    const productionsCompanies = document.querySelector('.productionsCompanies');
     //div called productionsCompanies append with productionCompanyEl
     productionsCompanies.prepend(productionCompanyEl)
   })
@@ -140,24 +138,36 @@ movieInfo.displayInfo = (info) => {
   textContainer.append(movieTitle, movieOverview, movieReleaseDate, movieRunTime);
   movieInfoContainer.appendChild(imageContainer);
 }
-// Code For Clickable Heart
-const whiteHeart = '\u2661';
-const blackHeart = '\u2665';
-const button = document.querySelector('button');
+
+//Find i on page and store in variable
+const heart = document.querySelector('i');
+
 //Function for heart toggle
 const toggle = () => {
-  const like = button.textContent;
-  if (like === whiteHeart) {
-    button.textContent = blackHeart;
+  //Clickable Hearts to toggle
+  const whiteHeart = 'fas fa-heart';
+  const blackHeart = 'far fa-heart';
+
+  const like = heart.className;
+  //If the class name of the heart is black
+  if (like === blackHeart) {
+    //Set class name of the heart to white
+    heart.className = whiteHeart;
   } else {
-    button.textContent = whiteHeart;
+    //Else set class name of the heart to black
+    heart.className = blackHeart;
   }
 }
-button.addEventListener('click', toggle)
+
+//Event listener for heart click
+heart.addEventListener('click', toggle);
+
 //Init Function
 movieInfo.init = () => {
   movieInfo.getMovieInfo();
   toggle();
 
 }
+
+//Kick start app
 movieInfo.init();
