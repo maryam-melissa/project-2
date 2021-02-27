@@ -243,6 +243,8 @@ body {
 
 body {
   color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#278ea5), to(#071e3d));
+  background: linear-gradient(#278ea5, #071e3d);
 }
 
 h1, h2, label, button {
@@ -285,8 +287,9 @@ button {
   border: none;
   font-size: 2.5rem;
   margin-top: 1.5rem;
-  background-color: #55FCF1;
+  background-color: #66FCF1;
   color: #071e3d;
+  letter-spacing: 1.5px;
 }
 
 img {
@@ -353,7 +356,7 @@ span {
   position: absolute;
   bottom: 5%;
   right: -2%;
-  background-color: #05d9e8;
+  background-color: #d1f7ff;
   border-radius: 50%;
   padding: 2rem;
   color: white;
@@ -397,10 +400,7 @@ span {
 }
 
 .landing-page {
-  color: #ff2a6d;
   overflow-x: hidden;
-  background: -webkit-gradient(linear, left top, left bottom, from(#278ea5), to(#071e3d));
-  background: linear-gradient(#278ea5, #071e3d);
 }
 
 .landing-page main {
@@ -422,13 +422,12 @@ span {
 }
 
 .landing-page h1 {
-  text-shadow: 0 -1px 6px #05d9e8, 0 10px 10px rgba(0, 0, 0, 0.75);
+  text-shadow: 0 -1px 6px #d1f7ff, 0 10px 10px #000000;
   color: #66FCF1;
 }
 
 .landing-page h2 {
   font-size: 2.4rem;
-  color: #d1f7ff;
   font-family: "Barlow", cursive;
 }
 
