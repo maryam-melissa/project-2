@@ -6,9 +6,6 @@
 
 
 body {
-    //background-color: $primary-color;
-    background: linear-gradient( #ce1e1e, #000000);
-    // color: rgb(48, 47, 47);
     color:white;
 }
 
@@ -21,18 +18,10 @@ p, input[type=text], select {
     font-family: $secondary-font;
 }
 
-// @keyframes myfirst {
-//   0%   {color:red; left:0px; top:0px;}
-//   25%  {color:yellow; left:200px; top:0px;}
-//   50%  {color:blue; left:200px; top:200px;}
-//   75%  {color:green; left:0px; top:200px;}
-//   100% {color:red; left:0px; top:0px;}
-// }
 
 h1 { 
     font-size: 8rem;
     color:white;
-    // animation: myfirst 5s linear 2s infinite alternate;s
 }
 h1, h2 {
     letter-spacing: 3px;
@@ -63,9 +52,8 @@ button {
     border: none;
     font-size: 2.5rem;
     margin-top: 1.5rem;
-    background-color:white;
-    // background-color:#000;
-    color:red;
+    background-color:$accent-color;
+    color:$base-font-color;
 }
 
 img {

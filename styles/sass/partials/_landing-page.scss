@@ -32,6 +32,17 @@
   //     background: linear-gradient( #dfcbff, #f8fed5);
   //   }
   // }
+    background: linear-gradient($primary-color, $secondary-color);
+
+    h1{
+      color:$accent-color;
+    }
+
+    h2 {
+    font-size: 3rem;
+    }
+
+  }
 
   .popularMoviesDisplay {
     width: 300%;
@@ -49,9 +60,6 @@
   @keyframes slideshow {
     0% {
       margin-left: 100%;
-  }
-
-
   }
 
 

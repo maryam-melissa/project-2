@@ -242,8 +242,6 @@ body {
 }
 
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ce1e1e), to(#000000));
-  background: linear-gradient(#ce1e1e, #000000);
   color: white;
 }
 
@@ -289,8 +287,8 @@ button {
   border: none;
   font-size: 2.5rem;
   margin-top: 1.5rem;
-  background-color: white;
-  color: red;
+  background-color: #ff2a6d;
+  color: #d1f7ff;
 }
 
 img {
@@ -356,7 +354,7 @@ span {
   position: absolute;
   bottom: 5%;
   right: -2%;
-  background-color: #553D67;
+  background-color: #7700a6;
   border-radius: 50%;
   padding: 2rem;
   color: white;
@@ -400,8 +398,10 @@ span {
 }
 
 .landing-page {
-  color: #F64C72;
+  color: #ff2a6d;
   overflow-x: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#01012b), to(#7700a6));
+  background: linear-gradient(#01012b, #7700a6);
 }
 
 .landing-page header {
@@ -424,7 +424,15 @@ span {
   background: linear-gradient(#ce1e1e, #000000);
 }
 
-.landing-page .popularMoviesDisplay {
+.landing-page h1 {
+  color: #ff2a6d;
+}
+
+.landing-page h2 {
+  font-size: 3rem;
+}
+
+.popularMoviesDisplay {
   width: 300%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -433,7 +441,7 @@ span {
           animation: slideshow 25s linear infinite;
 }
 
-.landing-page .popularMoviesDisplay img {
+.popularMoviesDisplay img {
   width: 15%;
   padding: 1%;
 }
@@ -442,21 +450,22 @@ span {
   0% {
     margin-left: 100%;
   }
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 @keyframes slideshow {
   0% {
     margin-left: 100%;
   }
-}
-
-.landing-page h2 {
-  font-size: 3rem;
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 .movie-info {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ce1e1e), to(#000000));
-  background: linear-gradient(#ce1e1e, #000000);
+  background-color: black;
   line-height: 1.4;
 }
 
@@ -499,7 +508,7 @@ span {
 }
 
 .movie-info .textContainer p {
-  color: #FFFFFF;
+  color: #d1f7ff;
 }
 
 .movie-info .genreInfo {
