@@ -1,16 +1,18 @@
-.movie-info {
-
+.movieInfo {
+  height:100vh;
+  overflow: hidden;
+  
   h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-top: 3%;
   }
-
   .movieInfoContainer {
+    height:77vh;
     display:flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    margin-top:5rem ;
+    margin-top:5rem;
   }
 
   .imgContainer {

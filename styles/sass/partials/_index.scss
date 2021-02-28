@@ -1,5 +1,4 @@
 .index {
-
     height: 100vh;
 
     header {
@@ -68,5 +67,11 @@
 
             padding-top: 20px;
         }
+        
     }
+
+    footer {
+            position: relative;
+            bottom:-21%;
+        }
 }

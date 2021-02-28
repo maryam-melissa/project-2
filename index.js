@@ -18,6 +18,12 @@ form.addEventListener('submit', function (event) {
   const actorInput = document.querySelector("input[type=text]").value;
   //Get genre option selected by user
   const genreInput = document.querySelector("select");
+  //Listen for user Selection for Genre
+  // genreInput.addEventListener('change', function (event) {
+  //   const selectedGenre = event.target.value;
+  //   //Call method to get the actor id of the actor searched for by user
+  //   moviePicker.getActorId(actorInput, selectedGenre);
+  // })
   const changeHeight = document.querySelector("body");
   changeHeight.style.height = "100%";
   //Call method to get the actor id of the actor searched for by user
@@ -46,7 +52,6 @@ moviePicker.getActorId = (name, genre) => {
     })
     //Parse JSON promise response
     .then((jsonResponse) => {
-      console.log(jsonResponse);
       //Pass actor id found from api call and genre passed to method to search for movies with both preferences
       moviePicker.getFilteredMovies(jsonResponse.results[0].id, genre);
       //Error Handler
@@ -78,11 +83,9 @@ moviePicker.getFilteredMovies = (actorId, genre) => {
     //Parse JSON promise response
     .then((jsonResponse) => {
       //Call method to load results to Html page
-      console.log(jsonResponse.results);
       moviePicker.loadMovies(jsonResponse.results, genre);
       //Error Handler
     }).catch((error) => {
-      console.log('Error Has Occured', error);
       alert('Please Select Actor Name and Genre From Dropdown Menu 🙂🤘🏾');
     })
 };
