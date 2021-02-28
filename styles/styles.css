@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Barlow&display=swap");
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
@@ -402,10 +403,11 @@ span {
 
 .landingPage {
   overflow-x: hidden;
+  height: 100vh;
 }
 
 .landingPage main {
-  height: 100vh;
+  height: 95vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -550,4 +552,18 @@ span {
 
 .movie-info .productionsCompanies .productionInfo p {
   font-size: 1.2rem;
+}
+
+footer {
+  padding: 1.8rem;
+  font-size: 1.6rem;
+  background-color: #071E3D;
+  text-align: center;
+  color: #66FCF1;
+}
+
+footer a {
+  color: #66FCF1;
+  text-decoration: none;
+  font-weight: bold;
 }
