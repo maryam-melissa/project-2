@@ -712,6 +712,10 @@ span {
   }
 }
 
+.movieInfo .imgContainer img {
+  width: 80%;
+}
+
 .movieInfo .imgContainer i {
   background-color: transparent;
   border: none;
