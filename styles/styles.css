@@ -264,6 +264,13 @@ p {
   font-family: "Open Sans", sans-serif;
 }
 
+@media (max-width: 800px) {
+  p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+
 input[type=text], select, option {
   font-family: "Barlow", cursive;
 }
@@ -276,6 +283,18 @@ h1 {
   margin-bottom: 5px;
 }
 
+@media (max-width: 800px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
 h2 {
   font-size: 2.4rem;
   color: white;
@@ -284,9 +303,28 @@ h2 {
   color: #D1F7FF;
 }
 
+@media (max-width: 800px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 0.50rem;
+  }
+}
+
 h3 {
   font-family: "Barlow", cursive;
   font-size: 3rem;
+}
+
+@media (max-width: 800px) {
+  h3 {
+    font-size: 1.6rem;
+  }
 }
 
 h4 {
@@ -306,6 +344,19 @@ button {
   background-color: #66FCF1;
   color: #071E3D;
   letter-spacing: 1.5px;
+}
+
+@media (max-width: 800px) {
+  button {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  button {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
 }
 
 button:hover, button:focus {
@@ -330,6 +381,12 @@ span {
   padding-top: 5%;
 }
 
+@media (max-width: 800px) {
+  .index header h1 {
+    margin-top: 10%;
+  }
+}
+
 .index .moviePreferences {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -350,8 +407,33 @@ span {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 800px) {
+  .index .moviePreferences h2 {
+    font-size: 3.4rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .index .moviePreferences h2 {
+    font-size: 2.6rem;
+  }
+}
+
 .index .moviePreferences fieldset {
   width: 400px;
+}
+
+@media (max-width: 800px) {
+  .index .moviePreferences fieldset {
+    width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .index .moviePreferences fieldset {
+    width: 300px;
+  }
 }
 
 .index .moviePreferences input[type=text], .index .moviePreferences select {
@@ -360,6 +442,18 @@ span {
   margin: 15px 0;
   border: 1px solid #CCC;
   border-radius: 4px;
+}
+
+@media (max-width: 800px) {
+  .index .moviePreferences input[type=text], .index .moviePreferences select {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .index .moviePreferences input[type=text], .index .moviePreferences select {
+    padding: 7px 10px;
+  }
 }
 
 .index .results {
@@ -375,6 +469,13 @@ span {
   width: calc(33% - 5%);
   margin: 2%;
   position: relative;
+}
+
+@media (max-width: 800px) {
+  .index .movie {
+    width: calc(50% - 6%);
+    margin: 3%;
+  }
 }
 
 .index .movie h3 {
@@ -401,9 +502,29 @@ span {
   padding-top: 20px;
 }
 
+@media (max-width: 800px) {
+  .index .movie p {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .index footer {
   position: relative;
   bottom: -21%;
+}
+
+@media (max-width: 800px) {
+  .index footer {
+    bottom: -27%;
+  }
+}
+
+@media (max-width: 600px) {
+  .index footer {
+    bottom: -30%;
+  }
 }
 
 .landingPage {
@@ -500,6 +621,12 @@ span {
   margin-top: 5rem;
 }
 
+@media (max-width: 800px) {
+  .movieInfo .movieInfoContainer {
+    display: block;
+  }
+}
+
 .movieInfo .imgContainer {
   margin-right: 5%;
   position: relative;
@@ -572,6 +699,25 @@ footer {
   text-align: center;
   color: #66FCF1;
   width: 100%;
+}
+
+@media (max-width: 800px) {
+  footer {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  footer {
+    font-size: 1rem;
+  }
 }
 
 footer a {

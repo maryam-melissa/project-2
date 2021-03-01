@@ -22,6 +22,10 @@ h1, label, button {
 
 p { 
     font-family: $secondaryFont;
+    @include tabletMQ {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
 }
 
 input[type=text], select, option {
@@ -35,20 +39,39 @@ h1 {
     letter-spacing: 8px;
     text-shadow: 0 -1px 6px $primaryColor, 0 6px 10px $tertiaryColor;
     margin-bottom: 5px;
+
+    @include tabletMQ {
+        font-size:6rem ;
+    }
+
+    @include largePhoneMQ  {
+        font-size:4rem;
+    }
 }
 
 h2 {
-    // font-size: 4.8rem;
     font-size: 2.4rem;
     color:white;
     letter-spacing: 2px;
     margin-bottom: 15px;
     color: $secondaryColor;
+
+    @include tabletMQ {
+        font-size:1.8rem ;
+    }
+    @include largePhoneMQ  {
+        font-size:1.6rem;
+        margin-top: 0.50rem;
+    }
 }
 
 h3 {
     font-family: $tertiaryFont;
     font-size:3rem;
+
+    @include tabletMQ {
+    font-size:1.6rem ;
+    }
 }
 
 h4 {
@@ -68,6 +91,15 @@ button {
     background-color: $primaryColor;
     color: $tertiaryColor;
     letter-spacing: 1.5px;
+
+    @include tabletMQ {
+        font-size:1.8rem ;
+    }
+
+    @include largePhoneMQ  {
+        font-size:1.6rem;
+        padding:1rem;
+    }
 }
 
 button:hover, button:focus {
