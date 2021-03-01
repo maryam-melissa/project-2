@@ -375,22 +375,24 @@ span {
 
 .index {
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .index header {
   text-align: center;
-  margin-top: 10%;
+  padding-top: 10%;
 }
 
 @media (max-width: 992px) {
   .index header {
-    margin-top: 15%;
+    padding-top: 15%;
   }
 }
 
 @media (max-width: 600px) {
   .index header {
-    margin-top: 25%;
+    padding-top: 25%;
   }
 }
 
@@ -540,17 +542,12 @@ span {
   }
 }
 
-.index footer {
-  visibility: hidden;
-}
-
 .landingPage {
   overflow-x: hidden;
   height: 100vh;
 }
 
 .landingPage main {
-  height: 100vh;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -565,6 +562,7 @@ span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 8%;
 }
 
 @media (max-width: 600px) {
@@ -575,7 +573,7 @@ span {
 }
 
 .landingPage .popularMoviesDisplay {
-  width: 350%;
+  width: 300%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -631,18 +629,12 @@ span {
           animation-play-state: paused;
 }
 
-.movieInfo {
-  overflow: hidden;
-}
-
-@media (max-width: 600px) {
-  .movieInfo {
-    overflow: initial;
-  }
+.landingPage footer {
+  width: 100%;
 }
 
 .movieInfo main {
-  height: 88vh;
+  height: 100vh;
 }
 
 @media (max-width: 600px) {
@@ -653,20 +645,27 @@ span {
 
 .movieInfo h1 {
   font-size: 5rem;
-  margin-top: 5%;
+  padding-top: 5%;
 }
 
 @media (max-width: 600px) {
   .movieInfo h1 {
     text-align: center;
-    font-size: 7rem;
-    margin-top: 10%;
+    font-size: 6rem;
+    padding-top: 10%;
   }
 }
 
 .movieInfo h2 {
   font-family: "Bangers", cursive;
-  font-size: 6rem;
+  font-size: 5rem;
+}
+
+@media (max-width: 600px) {
+  .movieInfo h2 {
+    font-size: 5rem;
+    text-align: center;
+  }
 }
 
 .movieInfo .movieInfoContainer {
@@ -707,15 +706,9 @@ span {
 
 @media (max-width: 600px) {
   .movieInfo .imgContainer {
-    width: 60%;
+    width: 40%;
     margin: 0;
-    margin-top: 5%;
-  }
-}
-
-@media (max-width: 450px) {
-  .movieInfo .imgContainer {
-    width: 80%;
+    padding-top: 5%;
   }
 }
 
@@ -737,7 +730,7 @@ span {
 @media (max-width: 600px) {
   .movieInfo .textContainer {
     width: 80%;
-    margin-bottom: 15%;
+    padding-bottom: 15%;
   }
 }
 
@@ -774,6 +767,9 @@ span {
 
 footer {
   background-color: #071E3D;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer p {
@@ -783,21 +779,21 @@ footer p {
 }
 
 @media (max-width: 992px) {
-  footer {
+  footer p {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width: 800px) {
-  footer {
-    font-size: 1.2rem;
+  footer p {
+    font-size: 1.6rem;
     line-height: 1.6;
   }
 }
 
 @media (max-width: 600px) {
-  footer {
-    font-size: 1rem;
+  footer p {
+    font-size: 1.6rem;
   }
 }
 

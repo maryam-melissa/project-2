@@ -1,34 +1,32 @@
 .movieInfo {
-  // height:100vh;
-  overflow: hidden;
-
-  @include largePhoneMQ {
-    overflow: initial;
-  }
-
+  
   main {
-    height: 88vh;
+    height: 100vh;
 
     @include largePhoneMQ { 
-    
       height: auto;
     }
   }
 
   h1 {
     font-size: 5rem;
-    margin-top: 5%;
+    padding-top: 5%;
 
     @include largePhoneMQ {
       text-align: center;  
-      font-size: 7rem;
-      margin-top: 10%;
+      font-size: 6rem;
+      padding-top: 10%;
     }
 
   }
    h2 {
      font-family: $primaryFont;
-     font-size: 6rem;
+     font-size: 5rem;
+
+     @include largePhoneMQ {
+       font-size: 5rem;
+       text-align: center;
+     }
    }
 
   .movieInfoContainer {
@@ -53,13 +51,9 @@
     width: 35%;
 
     @include largePhoneMQ {
-      width: 60%;
+      width: 40%;
       margin: 0;
-      margin-top: 5%;
-    }
-
-    @include smallPhoneMQ {
-      width: 80%;
+      padding-top: 5%;
     }
 
     i {
@@ -79,7 +73,7 @@
 
     @include largePhoneMQ {
       width: 80%;
-      margin-bottom: 15%;
+      padding-bottom: 15%;
     }
 
     p {

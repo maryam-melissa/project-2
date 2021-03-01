@@ -4,26 +4,27 @@ footer {
   background-color: $tertiaryColor;
   
  
-  // position: absolute;
-  // bottom: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
   p {
     text-align: center;
     padding: 1.8rem;
     color: $primaryColor;
-  }
 
-  @include laptopMQ {
-    font-size: 1.4rem;
-  }
-
-  @include tabletMQ {
-      font-size: 1.2rem;
-      line-height: 1.6;
+    @include laptopMQ {
+      font-size: 1.4rem;
     }
-
-  @include largePhoneMQ  {
-    font-size: 1rem;
+  
+    @include tabletMQ {
+        font-size: 1.6rem;
+        line-height: 1.6;
+      }
+  
+    @include largePhoneMQ  {
+      font-size: 1.6rem;
+      }
     }
 
   a {

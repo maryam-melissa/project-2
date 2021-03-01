@@ -1,16 +1,18 @@
 .index {
     height: 100vh;
+    margin: 0;
+    padding: 0;
 
     header {
         text-align: center;
-        margin-top: 10%;
+        padding-top: 10%;
 
         @include laptopMQ {
-            margin-top: 15%;
+            padding-top: 15%;
         }
 
         @include largePhoneMQ {
-            margin-top: 25%;
+            padding-top: 25%;
         }
     }
 
@@ -126,6 +128,6 @@
     }
 
     footer {
-        visibility: hidden;
+        // visibility: hidden;
     }
 }

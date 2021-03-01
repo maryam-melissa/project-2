@@ -3,15 +3,13 @@
   height:100vh;
 
   main {
-    height: 100vh;
+    // height: 100vh;
     width:100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    @include tabletMQ {
-    }
+    padding-top: 8%;
 
     @include largePhoneMQ {
       padding: 0;
@@ -21,7 +19,7 @@
   }
 
   .popularMoviesDisplay {
-    width: 350%;
+    width: 300%;
     display: flex;
     animation: slideshow 30s linear infinite;
     justify-content: space-between; 
@@ -54,5 +52,9 @@
 
   .popularMoviesDisplay:hover {
     animation-play-state: paused;
+  }
+
+  footer {
+    width: 100%;
   }
 }
