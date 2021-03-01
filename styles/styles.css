@@ -566,6 +566,12 @@ span {
           justify-content: space-between;
 }
 
+@media (max-width: 600px) {
+  .landingPage .popularMoviesDisplay {
+    display: none;
+  }
+}
+
 @-webkit-keyframes slideshow {
   0% {
     margin-left: 205%;
