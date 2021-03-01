@@ -1,6 +1,7 @@
 .landingPage {
   overflow-x: hidden;
   height:100vh;
+
   main {
     height:95vh;
     width:100%;
@@ -18,7 +19,7 @@
     width: 300%;
     display: flex;
     animation: slideshow 30s linear infinite;
-    justify-content: space-between;
+    justify-content: space-between; 
   }
 
   @keyframes slideshow {
