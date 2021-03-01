@@ -55,7 +55,6 @@ moviePicker.getActorId = (name, genre) => {
       moviePicker.getFilteredMovies(jsonResponse.results[0].id, genre);
       //Error Handler
     }).catch((error) => {
-      console.log('Error Has Occured', error);
       alert('Please Select Your Favourite Actor Name And Genre');
     })
 };
@@ -112,7 +111,6 @@ moviePicker.getGenre = () => {
       moviePicker.loadGenreData(jsonResponse.genres);
       //Error Handler
     }).catch((error) => {
-      console.log('Error Has Occured', error);
       alert('Error Has Occured');
     })
 };

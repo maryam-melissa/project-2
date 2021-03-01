@@ -20,7 +20,6 @@ landingPage.getPopularMovies = () => {
       //calling (landingPage.displayPopularMovies) method 
       landingPage.displayPopularMovies(jsonResponse.results);
     }).catch((error) => {
-      console.log('error');
       alert('404 ERROR'); //Change messages
     })
 }
