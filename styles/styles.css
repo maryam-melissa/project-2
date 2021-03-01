@@ -231,11 +231,11 @@ body {
 }
 
 /*Colour Palette*/
-/*Primary Colour: #242582*/
-/*Secondary Colour: #553D67*/
-/*Accent Colour: #F64C72*/
-/*Font Colour: #FFFFFF*/
-/*Font Variables*/
+/*Primary Colour: #66FCF1*/
+/*Secondary Colour: #D1F7FF*/
+/*Tertiary Colour: #071E3D*/
+/*Background Colour: #278EA5*/
+/*Glow Colour: #$glowColor: #05D9E8;*/
 .wrapper {
   max-width: 1280px;
   width: 90%;

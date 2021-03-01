@@ -31,7 +31,6 @@ movieInfo.getMovieInfo = () => {
     .then((jsonResponse) => {
       //Pass actor id found from api call and genre passed to method to search for movies with both preferences
       //Call the Method for displayInfo
-      console.log(jsonResponse);
       movieInfo.displayInfo(jsonResponse);
       //Error Handler
     }).catch((error) => {
@@ -41,7 +40,7 @@ movieInfo.getMovieInfo = () => {
 
 //Create the Method for displayInfo
 movieInfo.displayInfo = (info) => {
-
+  // Call method to set title of document
   movieInfo.setTitle(info.title);
   //Query Selector element from movie info page
   const movieInfoContainer = document.querySelector('.movieInfoContainer');
@@ -79,75 +78,7 @@ movieInfo.displayInfo = (info) => {
   //update text inside p
   movieOverview.textContent = info.overview;
 
-  //Create p tags element for genre Name and Id to show it onto the page
-  // const genreName = document.createElement('p');
-  // //Put genre array details into variable
-  // const genresDetails = info.genres.
-  // genresDetails.forEach((movie) => {
-  //   const { name } = movie;
-  //   genreName.textContent = name;
-  // });
-
-  // Loop through the array to get access to its properties
-  // genresDetails.forEach((movie) => {
-  //   //Create div for Each Genre Info
-  //   const singleGenreDiv = document.createElement('div');
-  //   //Give a Class to singleGenreDiv for CSS styling purposes
-  //   singleGenreDiv.classList.add('genre');
-  //   //destructuring Array
-  //   const { name } = movie;
-  //   //update genre details (Name, Id)
-  //   genreName.textContent = name;
-  //   //Append genre name and id into sinleGenreDiv 
-  //   singleGenreDiv.append(name);
-  //   //Select div from Dom 
-  //   const genreInfo = document.querySelector('.genreInfo');
-  //   //Append singleGenreDiv to the genreInfo 
-  //   genreInfo.append(singleGenreDiv);
-  // });
-  // //Create variable to save company details init
-  // const productionCompanyDetails = info.production_companies;
-  // //Loop through productionCompanyDetails variable
-  // productionCompanyDetails.forEach((company) => {
-  //   //Create p tag element to show production companies
-  //   const productionCompanyEl = document.createElement('div');
-  //   //Add a class to productionCompanyEl for CSS styling purposes
-  //   productionCompanyEl.classList.add('productionInfo')
-  //   //destructuring the array to get details
-  //   const { id, logo_path, name, origin_country } = company;
-  //   //Image URL
-  //   const url = `https://image.tmdb.org/t/p/w200/${logo_path}`;
-  //   //Create img element
-  //   const logoPath = document.createElement('img');
-  //   ////Add image path to image src attribute
-  //   logoPath.src = url;
-  //   //alt attribute for image
-  //   logoPath.alt = name;
-  //   //Create p element for company name
-  //   const companyName = document.createElement('p');
-  //   //update the company name
-  //   companyName.textContent = name;
-  //   //Create p element for company id
-  //   const companyId = document.createElement('p');
-  //   //update the company id
-  //   companyId.textContent = id;
-  //   //Create p element for country origin
-  //   const originCountry = document.createElement('p');
-  //   //update the company origin country
-  //   originCountry.textContent = origin_country;
-  //   //append the all elements to div called productionCompanyEl
-  //   productionCompanyEl.append(logoPath, companyName, companyId, originCountry);
-  //   //div query selected from Dom
-  //   const productionsCompanies = document.querySelector('.productionsCompanies');
-  //   //div called productionsCompanies append with productionCompanyEl
-  //   productionsCompanies.prepend(productionCompanyEl)
-  // })
-  // //append all details about movie which are selected and updated on top 
-
-  // const changeFooter = document.querySelector("footer");
-  // changeFooter.style.position = "relative";
-  // changeFooter.style.bottom = "0";
-
+  //append elements to document
   textContainer.append(movieTitle, movieReleaseDate, movieRunTime, movieOverview);
   movieInfoContainer.appendChild(imageContainer);
 }
@@ -175,6 +106,7 @@ const toggle = () => {
 //Event listener for heart click
 heart.addEventListener('click', toggle);
 
+//Method to set title of document to movie title
 movieInfo.setTitle = (movieTitle) => {
   const title = document.querySelector('title');
   title.textContent = movieTitle + " Info";

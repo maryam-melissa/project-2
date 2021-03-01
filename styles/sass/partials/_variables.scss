@@ -1,14 +1,9 @@
 /*Colour Palette*/
-/*Primary Colour: #242582*/
-/*Secondary Colour: #553D67*/
-/*Accent Colour: #F64C72*/
-/*Font Colour: #FFFFFF*/
-
-// $primary-color:#01012b;
-// $secondary-color:#05d9e8;
-// $accent-color:#ff2a6d;
-// $base-font-color:#d1f7ff;
-// $tertiary-color:#005678;
+/*Primary Colour: #66FCF1*/
+/*Secondary Colour: #D1F7FF*/
+/*Tertiary Colour: #071E3D*/
+/*Background Colour: #278EA5*/
+/*Glow Colour: #$glowColor: #05D9E8;*/
 
 $primaryColor: #66FCF1;
 $secondaryColor: #D1F7FF;
@@ -16,8 +11,7 @@ $tertiaryColor: #071E3D;
 $backgroundColor: #278EA5;
 $glowColor: #05D9E8;
 
-
-/*Font Variables*/
+//Font Variables
 $primaryFont:'Bangers', cursive;
 $secondaryFont: 'Open Sans', sans-serif;
 $tertiaryFont: 'Barlow', cursive;
