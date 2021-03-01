@@ -22,7 +22,7 @@
     justify-content: space-between; 
 
     @include largePhoneMQ {
-      display: none;
+        display: none;
     }
   }
 
