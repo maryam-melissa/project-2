@@ -162,9 +162,16 @@ const toggle = () => {
 //Event listener for heart click
 heart.addEventListener('click', toggle);
 
+movieInfo.setTitle = (movieTitle) => {
+  const title = document.querySelector('title');
+
+  title = movieTitle;
+}
+
 //Init Function
 movieInfo.init = () => {
   movieInfo.getMovieInfo();
+  movieInfo.setTitle("Matt");
   toggle();
 
 }
