@@ -1,29 +1,65 @@
 .movieInfo {
-  height:100vh;
+  // height:100vh;
   overflow: hidden;
-  
+
+  @include largePhoneMQ {
+    overflow: initial;
+  }
+
+  main {
+    height: 88vh;
+
+    @include largePhoneMQ { 
+    
+      height: auto;
+    }
+  }
+
   h1 {
     font-size: 5rem;
-    margin-top: 3%;
+    margin-top: 5%;
+
+    @include largePhoneMQ {
+      text-align: center;  
+      font-size: 7rem;
+      margin-top: 10%;
+    }
+
   }
+   h2 {
+     font-family: $primaryFont;
+     font-size: 6rem;
+   }
+
   .movieInfoContainer {
-    height:77vh;
-    display:flex;
+    display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    margin-top:5rem;
+    margin-top: 5%;
+
     @include tabletMQ {
-      display: block;
+      margin-top: 10%;
+    }
+
+    @include largePhoneMQ {
+     flex-direction: column-reverse;
+     margin: 0;
+     align-items: center;
     }
   }
 
   .imgContainer {
     margin-right: 5%;
     position: relative;
+    width: 35%;
 
-    img {
-      object-fit: cover;
+    @include largePhoneMQ {
+      width: 60%;
+      margin: 0;
+      margin-top: 5%;
+    }
+
+    @include smallPhoneMQ {
+      width: 80%;
     }
 
     i {
@@ -39,38 +75,37 @@
 
   .textContainer {
     padding-top: 5rem;
-    max-width: 65%;
-    width: 100%;
-  
+    width: 60%;
+
+    @include largePhoneMQ {
+      width: 80%;
+      margin-bottom: 15%;
+    }
+
     p {
-      color: $secondaryColor;
+      font-size: 2rem;
+      margin-top: 3%;
+
+      @include tabletMQ {
+        font-size: 1.6rem;
+        letter-spacing: 1.5px;
+        line-height: 2.2rem;
+      }
     }
+
   }
 
-  .genreInfo {
-    font-weight: bold;
-    display:flex;
-    padding:1.5rem;
-    border-radius: 5px;
-    .genre {
-      font-style: italic;
-      margin-right:30px;
+  footer p {
+    @include laptopMQ {
+      font-size: 1.8rem;
     }
-  }
 
-  .productionsCompanies {
-    display:flex;
-    padding:1rem 0;
-    margin-top: 2rem;
-    .productionInfo {
-      margin-right:5rem;
-    max-width:200px;
-      img {
-        width:40px;
-      }
-      p {
-        font-size: 1.2rem;
-      }
+    @include tabletMQ {
+      font-size: 1.4rem;
+    }
+
+    @include largePhoneMQ { 
+      font-size: 1.6rem;
     }
   }
 }

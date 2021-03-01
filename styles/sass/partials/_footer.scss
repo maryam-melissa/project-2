@@ -1,11 +1,17 @@
 footer {
-  padding: 1.8rem;
-  font-size: 1.6rem;
+  // width: 100%;
+  // font-size: 1.6rem;
   background-color: $tertiaryColor;
-  text-align: center;
-  color: $primaryColor;
-  position: absolute;
-  bottom: 0;
+  
+ 
+  // position: absolute;
+  // bottom: 0;
+
+  p {
+    text-align: center;
+    padding: 1.8rem;
+    color: $primaryColor;
+  }
 
   @include laptopMQ {
     font-size: 1.4rem;

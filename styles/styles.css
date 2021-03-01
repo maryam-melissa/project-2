@@ -260,15 +260,16 @@ h1, label, button {
   font-family: "Bangers", cursive;
 }
 
-p {
+h3, h4 {
   font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
 }
 
-@media (max-width: 800px) {
-  p {
-    font-size: 1.5rem;
-    line-height: 1.4;
-  }
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.6rem;
+  line-height: 2.8rem;
+  color: #D1F7FF;
 }
 
 input[type=text], select, option {
@@ -308,7 +309,7 @@ h2 {
   letter-spacing: 2px;
   margin-bottom: 15px;
   color: #D1F7FF;
-  line-height: 3rem;
+  line-height: 7rem;
 }
 
 @media (max-width: 800px) {
@@ -324,7 +325,6 @@ h2 {
 }
 
 h3 {
-  font-family: "Barlow", cursive;
   font-size: 2.4rem;
 }
 
@@ -632,17 +632,44 @@ span {
 }
 
 .movieInfo {
-  height: 100vh;
   overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .movieInfo {
+    overflow: initial;
+  }
+}
+
+.movieInfo main {
+  height: 88vh;
+}
+
+@media (max-width: 600px) {
+  .movieInfo main {
+    height: auto;
+  }
 }
 
 .movieInfo h1 {
   font-size: 5rem;
-  margin-top: 3%;
+  margin-top: 5%;
+}
+
+@media (max-width: 600px) {
+  .movieInfo h1 {
+    text-align: center;
+    font-size: 7rem;
+    margin-top: 10%;
+  }
+}
+
+.movieInfo h2 {
+  font-family: "Bangers", cursive;
+  font-size: 6rem;
 }
 
 .movieInfo .movieInfoContainer {
-  height: 77vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -650,29 +677,46 @@ span {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 5rem;
+  margin-top: 5%;
 }
 
 @media (max-width: 800px) {
   .movieInfo .movieInfoContainer {
-    display: block;
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  .movieInfo .movieInfoContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 .movieInfo .imgContainer {
   margin-right: 5%;
   position: relative;
+  width: 35%;
 }
 
-.movieInfo .imgContainer img {
-  -o-object-fit: cover;
-     object-fit: cover;
+@media (max-width: 600px) {
+  .movieInfo .imgContainer {
+    width: 60%;
+    margin: 0;
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 450px) {
+  .movieInfo .imgContainer {
+    width: 80%;
+  }
 }
 
 .movieInfo .imgContainer i {
@@ -687,57 +731,55 @@ span {
 
 .movieInfo .textContainer {
   padding-top: 5rem;
-  max-width: 65%;
-  width: 100%;
+  width: 60%;
+}
+
+@media (max-width: 600px) {
+  .movieInfo .textContainer {
+    width: 80%;
+    margin-bottom: 15%;
+  }
 }
 
 .movieInfo .textContainer p {
-  color: #D1F7FF;
+  font-size: 2rem;
+  margin-top: 3%;
 }
 
-.movieInfo .genreInfo {
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 1.5rem;
-  border-radius: 5px;
+@media (max-width: 800px) {
+  .movieInfo .textContainer p {
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+    line-height: 2.2rem;
+  }
 }
 
-.movieInfo .genreInfo .genre {
-  font-style: italic;
-  margin-right: 30px;
+@media (max-width: 992px) {
+  .movieInfo footer p {
+    font-size: 1.8rem;
+  }
 }
 
-.movieInfo .productionsCompanies {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 1rem 0;
-  margin-top: 2rem;
+@media (max-width: 800px) {
+  .movieInfo footer p {
+    font-size: 1.4rem;
+  }
 }
 
-.movieInfo .productionsCompanies .productionInfo {
-  margin-right: 5rem;
-  max-width: 200px;
-}
-
-.movieInfo .productionsCompanies .productionInfo img {
-  width: 40px;
-}
-
-.movieInfo .productionsCompanies .productionInfo p {
-  font-size: 1.2rem;
+@media (max-width: 600px) {
+  .movieInfo footer p {
+    font-size: 1.6rem;
+  }
 }
 
 footer {
-  padding: 1.8rem;
-  font-size: 1.6rem;
   background-color: #071E3D;
+}
+
+footer p {
   text-align: center;
+  padding: 1.8rem;
   color: #66FCF1;
-  position: absolute;
-  bottom: 0;
 }
 
 @media (max-width: 992px) {

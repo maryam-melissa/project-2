@@ -19,13 +19,16 @@ h1, label, button {
     font-family: $primaryFont;
 }
 
+h3, h4 {
+    font-family: $secondaryFont;
+    letter-spacing: 2px;
+}
+
 p { 
     font-family: $secondaryFont;
-    
-    @include tabletMQ {
-        font-size: 1.5rem;
-        line-height: 1.4;
-    }
+    font-size: 2.6rem;
+    line-height: 2.8rem;
+    color: $secondaryColor;
 }
 
 input[type=text], select, option {
@@ -60,7 +63,7 @@ h2 {
     letter-spacing: 2px;
     margin-bottom: 15px;
     color: $secondaryColor;
-    line-height: 3rem;
+    line-height: 7rem;
 
     @include tabletMQ {
         font-size:2.8rem ;
@@ -72,7 +75,6 @@ h2 {
 }
 
 h3 {
-    font-family: $tertiaryFont;
     font-size: 2.4rem;
 
     @include tabletMQ {

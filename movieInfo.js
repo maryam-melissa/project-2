@@ -30,18 +30,19 @@ movieInfo.getMovieInfo = () => {
     //Parse JSON promise response
     .then((jsonResponse) => {
       //Pass actor id found from api call and genre passed to method to search for movies with both preferences
-      console.log(jsonResponse)
       //Call the Method for displayInfo
+      console.log(jsonResponse);
       movieInfo.displayInfo(jsonResponse);
       //Error Handler
     }).catch((error) => {
-      console.log('Error Has Occured', error);
       alert('Error Has Occured');
     })
 }
 
 //Create the Method for displayInfo
 movieInfo.displayInfo = (info) => {
+
+  movieInfo.setTitle(info.title);
   //Query Selector element from movie info page
   const movieInfoContainer = document.querySelector('.movieInfoContainer');
   // Create a div element to wrap each movie
@@ -55,7 +56,7 @@ movieInfo.displayInfo = (info) => {
   //Add image path to image src attribute
   image.src = url;
   //Add movie title image description to alt attribute
-  image.alt = info.title;
+  image.alt = info.title + " movie poster";
   //Append image to image container
   imageContainer.appendChild(image);
   //Select text Container from Dom
@@ -64,10 +65,7 @@ movieInfo.displayInfo = (info) => {
   const movieTitle = document.createElement('h2');
   //update title inside h2
   movieTitle.textContent = info.title;
-  //Create p tag for movie overview
-  const movieOverview = document.createElement('p');
-  //update text inside p
-  movieOverview.textContent = info.overview;
+
   //Create h3 heading for movie Release Date
   const movieReleaseDate = document.createElement('h3');
   //update movie release date info
@@ -75,67 +73,82 @@ movieInfo.displayInfo = (info) => {
   //Create h4 heading for movie run time info
   const movieRunTime = document.createElement('h4');
   //update movie run time info into p tag
-  movieRunTime.textContent = info.runtime;
+  movieRunTime.textContent = info.runtime + " m";
+  //Create p tag for movie overview
+  const movieOverview = document.createElement('p');
+  //update text inside p
+  movieOverview.textContent = info.overview;
+
   //Create p tags element for genre Name and Id to show it onto the page
-  const genreName = document.createElement('p');
-  //Put genre array details into variable
-  const genresDetails = info.genres;
-  //Loop through the array to get access to its properties
-  genresDetails.forEach((movie) => {
-    //Create div for Each Genre Info
-    const singleGenreDiv = document.createElement('div');
-    //Give a Class to singleGenreDiv for CSS styling purposes
-    singleGenreDiv.classList.add('genre');
-    //destructuring Array
-    const { name } = movie;
-    //update genre details (Name, Id)
-    genreName.textContent = name;
-    //Append genre name and id into sinleGenreDiv 
-    singleGenreDiv.append(name);
-    //Select div from Dom 
-    const genreInfo = document.querySelector('.genreInfo');
-    //Append singleGenreDiv to the genreInfo 
-    genreInfo.append(singleGenreDiv);
-  });
-  //Create variable to save company details init
-  const productionCompanyDetails = info.production_companies;
-  //Loop through productionCompanyDetails variable
-  productionCompanyDetails.forEach((company) => {
-    //Create p tag element to show production companies
-    const productionCompanyEl = document.createElement('div');
-    //Add a class to productionCompanyEl for CSS styling purposes
-    productionCompanyEl.classList.add('productionInfo')
-    //destructuring the array to get details
-    const { id, logo_path, name, origin_country } = company;
-    //Image URL
-    const url = `https://image.tmdb.org/t/p/w200/${logo_path}`;
-    //Create img element
-    const logoPath = document.createElement('img');
-    ////Add image path to image src attribute
-    logoPath.src = url;
-    //alt attribute for image
-    logoPath.alt = name;
-    //Create p element for company name
-    const companyName = document.createElement('p');
-    //update the company name
-    companyName.textContent = name;
-    //Create p element for company id
-    const companyId = document.createElement('p');
-    //update the company id
-    companyId.textContent = id;
-    //Create p element for country origin
-    const originCountry = document.createElement('p');
-    //update the company origin country
-    originCountry.textContent = origin_country;
-    //append the all elements to div called productionCompanyEl
-    productionCompanyEl.append(logoPath, companyName, companyId, originCountry);
-    //div query selected from Dom
-    const productionsCompanies = document.querySelector('.productionsCompanies');
-    //div called productionsCompanies append with productionCompanyEl
-    productionsCompanies.prepend(productionCompanyEl)
-  })
-  //append all details about movie which are selected and updated on top 
-  textContainer.append(movieTitle, movieOverview, movieReleaseDate, movieRunTime);
+  // const genreName = document.createElement('p');
+  // //Put genre array details into variable
+  // const genresDetails = info.genres.
+  // genresDetails.forEach((movie) => {
+  //   const { name } = movie;
+  //   genreName.textContent = name;
+  // });
+
+  // Loop through the array to get access to its properties
+  // genresDetails.forEach((movie) => {
+  //   //Create div for Each Genre Info
+  //   const singleGenreDiv = document.createElement('div');
+  //   //Give a Class to singleGenreDiv for CSS styling purposes
+  //   singleGenreDiv.classList.add('genre');
+  //   //destructuring Array
+  //   const { name } = movie;
+  //   //update genre details (Name, Id)
+  //   genreName.textContent = name;
+  //   //Append genre name and id into sinleGenreDiv 
+  //   singleGenreDiv.append(name);
+  //   //Select div from Dom 
+  //   const genreInfo = document.querySelector('.genreInfo');
+  //   //Append singleGenreDiv to the genreInfo 
+  //   genreInfo.append(singleGenreDiv);
+  // });
+  // //Create variable to save company details init
+  // const productionCompanyDetails = info.production_companies;
+  // //Loop through productionCompanyDetails variable
+  // productionCompanyDetails.forEach((company) => {
+  //   //Create p tag element to show production companies
+  //   const productionCompanyEl = document.createElement('div');
+  //   //Add a class to productionCompanyEl for CSS styling purposes
+  //   productionCompanyEl.classList.add('productionInfo')
+  //   //destructuring the array to get details
+  //   const { id, logo_path, name, origin_country } = company;
+  //   //Image URL
+  //   const url = `https://image.tmdb.org/t/p/w200/${logo_path}`;
+  //   //Create img element
+  //   const logoPath = document.createElement('img');
+  //   ////Add image path to image src attribute
+  //   logoPath.src = url;
+  //   //alt attribute for image
+  //   logoPath.alt = name;
+  //   //Create p element for company name
+  //   const companyName = document.createElement('p');
+  //   //update the company name
+  //   companyName.textContent = name;
+  //   //Create p element for company id
+  //   const companyId = document.createElement('p');
+  //   //update the company id
+  //   companyId.textContent = id;
+  //   //Create p element for country origin
+  //   const originCountry = document.createElement('p');
+  //   //update the company origin country
+  //   originCountry.textContent = origin_country;
+  //   //append the all elements to div called productionCompanyEl
+  //   productionCompanyEl.append(logoPath, companyName, companyId, originCountry);
+  //   //div query selected from Dom
+  //   const productionsCompanies = document.querySelector('.productionsCompanies');
+  //   //div called productionsCompanies append with productionCompanyEl
+  //   productionsCompanies.prepend(productionCompanyEl)
+  // })
+  // //append all details about movie which are selected and updated on top 
+
+  // const changeFooter = document.querySelector("footer");
+  // changeFooter.style.position = "relative";
+  // changeFooter.style.bottom = "0";
+
+  textContainer.append(movieTitle, movieReleaseDate, movieRunTime, movieOverview);
   movieInfoContainer.appendChild(imageContainer);
 }
 
@@ -164,14 +177,12 @@ heart.addEventListener('click', toggle);
 
 movieInfo.setTitle = (movieTitle) => {
   const title = document.querySelector('title');
-
-  title = movieTitle;
+  title.textContent = movieTitle + " Info";
 }
 
 //Init Function
 movieInfo.init = () => {
   movieInfo.getMovieInfo();
-  movieInfo.setTitle("Matt");
   toggle();
 
 }
