@@ -24,8 +24,7 @@ form.addEventListener('submit', function (event) {
   //   //Call method to get the actor id of the actor searched for by user
   //   moviePicker.getActorId(actorInput, selectedGenre);
   // })
-  const changeHeight = document.querySelector("body");
-  changeHeight.style.height = "100%";
+
   //Call method to get the actor id of the actor searched for by user
   moviePicker.getActorId(actorInput, genreInput.selectedOptions[0].value);
 });
@@ -171,6 +170,16 @@ moviePicker.loadMovies = (movies, genre) => {
   img.alt = "";
   //Append element to Html
   results.appendChild(img);
+
+  results.scrollIntoView({behavior: "smooth"});
+
+  const changeHeight = document.querySelector("body");
+  changeHeight.style.height = "100%";
+
+  const changeFooter = document.querySelector("footer");
+  changeFooter.style.position = "relative";
+  changeFooter.style.bottom = "0";
+  changeFooter.style.visibility = "visible";
 
   //For each image on page, add an event listener for user click
   document.querySelectorAll('img').forEach(movieImage => {

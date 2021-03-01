@@ -3,11 +3,10 @@
 
     header {
         text-align: center;
-        padding-top: 5%;
-        h1 {
-            @include tabletMQ {
-                margin-top: 10%;
-            }
+        margin-top: 10%;
+
+        @include laptopMQ {
+            margin-top: 15%;
         }
     }
 
@@ -18,9 +17,12 @@
         align-items: center;
         
         h2 {
-            font-family: $primaryFont;
             font-size: 4rem;
             margin-bottom: 2rem;
+
+            @include laptopMQ {
+                font-size: 2.6rem;
+            }
 
             @include tabletMQ {
                 font-size: 3.4rem;
@@ -109,15 +111,6 @@
     }
 
     footer {
-            position: relative;
-            bottom:-21%;
-
-            @include tabletMQ {
-                bottom: -27%;
-            }
-
-            @include largePhoneMQ {
-                bottom: -30%;
-            }
-        }
+        visibility: hidden;
+    }
 }

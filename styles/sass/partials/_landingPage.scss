@@ -3,23 +3,36 @@
   height:100vh;
 
   main {
-    height:95vh;
-    width:100%;
+    height: 100vh;
+    width:100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
 
-  h2 {
-    font-family: $tertiaryFont;
+    @include tabletMQ {
+    }
+
+    @include largePhoneMQ {
+      padding: 0;
+      height: 100vh;
+    }
+
   }
 
   .popularMoviesDisplay {
-    width: 300%;
+    width: 350%;
     display: flex;
     animation: slideshow 30s linear infinite;
     justify-content: space-between; 
+
+    @include laptopMQ {
+      width: 400%;
+    }
+
+    @include tabletMQ {
+      width: 500%;
+    }
 
     @include largePhoneMQ {
         display: none;
