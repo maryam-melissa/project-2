@@ -20,6 +20,10 @@
     display: flex;
     animation: slideshow 30s linear infinite;
     justify-content: space-between; 
+
+    @include largePhoneMQ {
+        display: none;
+    }
   }
 
   @keyframes slideshow {
