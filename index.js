@@ -168,6 +168,7 @@ moviePicker.loadMovies = (movies, genre) => {
   img.src = movies[0].poster_path;
   //Add alt attribute to img created
   img.alt = "";
+
   //Append element to Html
   results.appendChild(img);
 
@@ -183,6 +184,10 @@ moviePicker.loadMovies = (movies, genre) => {
 
   //For each image on page, add an event listener for user click
   document.querySelectorAll('img').forEach(movieImage => {
+    //Add a pointer to each image on hover
+    movieImage.style.cursor = "pointer";
+
+    //Add event listener to each movie poster for on click
     movieImage.addEventListener('click', function (event) {
       //Prevent page from refreshing
       event.preventDefault();

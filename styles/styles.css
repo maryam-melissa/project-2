@@ -353,12 +353,6 @@ button {
   letter-spacing: 1.5px;
 }
 
-@media (max-width: 800px) {
-  button {
-    font-size: 1.8rem;
-  }
-}
-
 @media (max-width: 600px) {
   button {
     font-size: 2.4rem;
@@ -394,6 +388,12 @@ span {
   }
 }
 
+@media (max-width: 600px) {
+  .index header {
+    margin-top: 25%;
+  }
+}
+
 .index .moviePreferences {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -421,8 +421,7 @@ span {
 
 @media (max-width: 800px) {
   .index .moviePreferences h2 {
-    font-size: 3.4rem;
-    margin-top: 1rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -432,23 +431,23 @@ span {
   }
 }
 
-.index .moviePreferences fieldset {
+.index fieldset {
   width: 400px;
 }
 
 @media (max-width: 800px) {
-  .index .moviePreferences fieldset {
+  .index fieldset {
     width: 350px;
   }
 }
 
 @media (max-width: 600px) {
-  .index .moviePreferences fieldset {
+  .index fieldset {
     width: 300px;
   }
 }
 
-.index .moviePreferences input[type=text], .index .moviePreferences select {
+.index input[type=text], .index select {
   width: 80%;
   padding: 15px 20px;
   margin: 15px 0;
@@ -457,19 +456,20 @@ span {
 }
 
 @media (max-width: 800px) {
-  .index .moviePreferences input[type=text], .index .moviePreferences select {
+  .index input[type=text], .index select {
     padding: 10px 15px;
   }
 }
 
 @media (max-width: 600px) {
-  .index .moviePreferences input[type=text], .index .moviePreferences select {
+  .index input[type=text], .index select {
     padding: 7px 10px;
   }
 }
 
 .index .results {
   padding: 5%;
+  margin-top: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,9 +490,23 @@ span {
   }
 }
 
+@media (max-width: 600px) {
+  .index .movie {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+  }
+}
+
 .index .movie h3 {
   text-align: center;
   margin: 1rem;
+}
+
+@media (max-width: 992px) {
+  .index .movie h3 {
+    font-size: 2rem;
+  }
 }
 
 .index .movie p {
@@ -516,9 +530,13 @@ span {
 
 @media (max-width: 800px) {
   .index .movie p {
-    font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .index .movie p {
+    visibility: hidden;
   }
 }
 
@@ -718,7 +736,6 @@ footer {
   background-color: #071E3D;
   text-align: center;
   color: #66FCF1;
-  width: 100%;
   position: absolute;
   bottom: 0;
 }

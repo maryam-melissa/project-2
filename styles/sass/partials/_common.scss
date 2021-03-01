@@ -21,6 +21,7 @@ h1, label, button {
 
 p { 
     font-family: $secondaryFont;
+    
     @include tabletMQ {
         font-size: 1.5rem;
         line-height: 1.4;
@@ -96,10 +97,6 @@ button {
     background-color: $primaryColor;
     color: $tertiaryColor;
     letter-spacing: 1.5px;
-
-    @include tabletMQ {
-        font-size:1.8rem ;
-    }
 
     @include largePhoneMQ  {
         font-size:2.4rem;
