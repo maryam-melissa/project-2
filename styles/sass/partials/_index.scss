@@ -2,13 +2,14 @@
     height: 100vh;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 
     header {
         text-align: center;
-        padding-top: 10%;
+        padding-top: 5%;
 
         @include laptopMQ {
-            padding-top: 15%;
+            padding-top: 20%;
         }
 
         @include largePhoneMQ {

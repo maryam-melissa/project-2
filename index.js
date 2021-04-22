@@ -10,10 +10,13 @@ const form = document.querySelector('form');
 
 /***Event Listeners****/
 //Event Listener to listen for submit button to be clicked by user.
-//*******Need to add error message in case user does not submit correct input*********
 form.addEventListener('submit', function (event) {
   //Prevents page from refreshing
   event.preventDefault();
+
+  //Fix overflow
+  document.getElementById("index").style.overflow = "initial"; 
+
   //Get actor input from user
   const actorInput = document.querySelector("input[type=text]").value;
   //Get genre option selected by user
@@ -85,6 +88,7 @@ moviePicker.getFilteredMovies = (actorId, genre) => {
       //Error Handler
     }).catch((error) => {
       alert('Please Select Actor Name and Genre From Dropdown Menu 🙂🤘🏾');
+      console.log(error);
     })
 };
 
@@ -175,10 +179,10 @@ moviePicker.loadMovies = (movies, genre) => {
   const changeHeight = document.querySelector("body");
   changeHeight.style.height = "100%";
 
-  const changeFooter = document.querySelector("footer");
-  changeFooter.style.position = "relative";
-  changeFooter.style.bottom = "0";
-  changeFooter.style.visibility = "visible";
+  // const changeFooter = document.querySelector("footer");
+  // changeFooter.style.position = "relative";
+  // changeFooter.style.bottom = "0";
+  // changeFooter.style.visibility = "visible";
 
   //For each image on page, add an event listener for user click
   document.querySelectorAll('img').forEach(movieImage => {

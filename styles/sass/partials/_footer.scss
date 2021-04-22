@@ -1,7 +1,5 @@
 footer {
   background-color: $tertiaryColor;
-  
- 
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -10,6 +8,7 @@ footer {
     text-align: center;
     padding: 1.8rem;
     color: $primaryColor;
+    font-size: 1.2rem;
 
     @include laptopMQ {
       font-size: 1.4rem;

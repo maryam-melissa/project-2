@@ -112,6 +112,17 @@ movieInfo.setTitle = (movieTitle) => {
   title.textContent = movieTitle + " Info";
 }
 
+//Store button to add event listener to
+const button = document.querySelector('.backBtn');
+
+//Event listener to listen for button click
+button.addEventListener('click', function (event) {
+  //Prevents page from refreshing
+  event.preventDefault();
+  //Redirect page to index
+  window.location.href = "./index.html";
+});
+
 //Init Function
 movieInfo.init = () => {
   movieInfo.getMovieInfo();

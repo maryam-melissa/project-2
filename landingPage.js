@@ -57,6 +57,7 @@ button.addEventListener('click', function (event) {
   //Redirect page to index
   window.location.href = "./index.html";
 });
+
 //Init Function
 landingPage.init = () => {
   landingPage.getPopularMovies();

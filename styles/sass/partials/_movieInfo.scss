@@ -1,8 +1,6 @@
 .movieInfo {
   
   main {
-    height: 100vh;
-
     @include largePhoneMQ { 
       height: auto;
     }
@@ -73,6 +71,7 @@
 
   .textContainer {
     padding-top: 5rem;
+    padding-bottom: 5rem;
     width: 60%;
 
     @include largePhoneMQ {

@@ -267,7 +267,7 @@ h3, h4 {
 
 p {
   font-family: "Open Sans", sans-serif;
-  font-size: 2.6rem;
+  font-size: 1.2rem;
   line-height: 2.8rem;
   color: #D1F7FF;
 }
@@ -377,16 +377,17 @@ span {
   height: 100vh;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .index header {
   text-align: center;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 @media (max-width: 992px) {
   .index header {
-    padding-top: 15%;
+    padding-top: 20%;
   }
 }
 
@@ -544,7 +545,6 @@ span {
 
 .landingPage {
   overflow-x: hidden;
-  height: 100vh;
 }
 
 .landingPage main {
@@ -631,10 +631,6 @@ span {
 
 .landingPage footer {
   width: 100%;
-}
-
-.movieInfo main {
-  height: 100vh;
 }
 
 @media (max-width: 600px) {
@@ -728,6 +724,7 @@ span {
 
 .movieInfo .textContainer {
   padding-top: 5rem;
+  padding-bottom: 5rem;
   width: 60%;
 }
 
@@ -780,6 +777,7 @@ footer p {
   text-align: center;
   padding: 1.8rem;
   color: #66FCF1;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 992px) {
